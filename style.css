@@ -15,6 +15,7 @@
 body {
   background-color: #e7f2fd;
   transition: all 0.5s ease;
+  padding-top: 60px;
 }
 body.dark {
   background-color: hsl(250, 6%, 19%);
@@ -376,4 +377,166 @@ a:hover{
     margin: 0;
     font-size: 16px;
     padding: 7px;
+}
+
+/* Login */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 20px; 
+}
+
+.login-form {
+  background-color: var(--white-color);
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  color: var(--grey-color);
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--grey-color);
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--grey-color-light);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3050d4;
+}
+
+.signup-link {
+  margin-top: 15px;
+  color: var(--grey-color);
+}
+
+.signup-link a {
+  color: var(--blue-color);
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/*Sign up*/
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.signup-form {
+  background-color: var(--white-color);
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.signup-form h2 {
+  margin-bottom: 20px;
+  color: var(--grey-color);
+}
+
+/* userprofile.html */
+.profile-container {
+  margin: 50px auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h2 {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.profile-info p {
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-actions button {
+  flex: 1;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4070f4;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-actions button:hover {
+  background-color: #3050d4;
 }
