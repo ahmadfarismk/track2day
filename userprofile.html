@@ -1,53 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Boxicons CSS -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <title>Track2Day</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+</head>
+<body>
     <!-- navbar -->
     <nav class="navbar">
-      <div class="logo_item">
-        <i class="bx bx-menu" id="sidebarOpen"></i>
-        <img src="icon.jpg" alt=""></i>Track2Day
-      </div>
-      <div class="navbar_content">
-        <i class='bi bi-grid'></i>
-        <i class='bx bx-sun' id="darkLight"></i>
-        <i class='bx bx-bell' ></i>
-        <ul>
-            <li><a href="logout.html">Logout</a></li>
-            <li><a href="userprofile.html">Profile</a></li>
-        </ul>
-      </div>
-</nav>
-
-<main>
-    <div class="profile-container">
-        <h1>User Profile</h1>
-        <div class="profile-details">
-            <div class="profile-pic">
-                <img src="#">
-            </div>
-            <h2>Ali Abu <!--First name & Last name--></h2>
-            <p>Email: aliabu@gmail.com</p>
-            
+        <div class="logo_item">
+            <i class="bx bx-menu" id="sidebarOpen"></i>
+            <img src="icon.jpg" alt=""></i>Track2Day
         </div>
-    
-    <div class="profile-actions">
-        <button>Edit Profile</button>
-        <button>Change Password</button>
-    </div>
-</div>
+        <div class="navbar_content">
+            <i class='bi bi-grid'></i>
+            <i class='bx bx-sun' id="darkLight"></i>
+            <i class='bx bx-bell'></i>
+            <ul>
+                <li><a href="logout.html">Logout</a></li>
+                <li><a href="userprofile.html">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    
-</main>
+    <main>
+        <div class="profile-container">
+            <h1>User Profile</h1>
+            <div class="profile-details">
+                <div class="profile-pic">
+                    <img src="#" alt="Profile Picture">
+                </div>
+                <h2>Ali Abu <!--First name & Last name--></h2>
+                <p>Email: aliabu@gmail.com</p>
+            </div>
+        
 
+        <div class="profile-actions">
+            <button onclick="location.href='editprofile.html'">Edit Profile</button>
+            <button onclick="location.href='changepassword.html'">Change Password</button>
+        </div>
+        </div>
 
+        <div class="progress-task-container">
+            <div class="progress-box">
+                <h3>Progress</h3>
+                <div class="progress-circle">
+                    <span id="progress-percentage">0%</span>
+                    
+                </div>
+                <p>Tasks Completed</p>
+            </div>
+            <div class="tasks-box">
+                <h3>Tasks</h3>
+                <ul id="task-list">
+                    <li>Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li>
+                </ul>
+                <button onclick="location.href='tasks.html'">Edit</button>
+            </div>
+        </div>
+    </main>
 
+    <!--<script src="script.js"></script> -->
 </body>
 </html>
