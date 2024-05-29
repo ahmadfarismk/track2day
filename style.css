@@ -772,3 +772,12 @@ button:hover {
 .tasks-container button:hover {
   background-color: #3050d4;
 }
+
+.task-table tr:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.task-table input[type="checkbox"] {
+  cursor: pointer;
+}
