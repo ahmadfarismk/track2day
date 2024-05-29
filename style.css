@@ -61,6 +61,9 @@ body.dark {
   align-items: center;
   column-gap: 25px;
 }
+.navbar a{
+  text-decoration: none;
+}
 .navbar_content i {
   cursor: pointer;
   font-size: 20px;
@@ -352,7 +355,7 @@ h3{
     color: white;
     font-size: 25px;
 }
-a{
+footer a{
     text-decoration: none;
     background-color: #e7f2fd;
     border-radius: 10px;
