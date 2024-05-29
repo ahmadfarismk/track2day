@@ -566,8 +566,8 @@ button:hover {
 }
 
 .progress-circle {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   border: 10px solid #4070f4;
   display: flex;
@@ -592,35 +592,35 @@ button:hover {
   margin-right: 15px;
 }
 
-.tasks-box h3 {
-  margin-bottom: 20px;
+.tasks-box table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
-.tasks-box ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.tasks-box th, .tasks-box td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
 }
 
-.tasks-box li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
+.tasks-box th {
+  background-color: #f4f4f4;
 }
 
-.tasks-box li button {
-  padding: 5px 10px;
+.tasks-box button {
+  margin-top: 20px;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   background-color: #4070f4;
   color: #fff;
+  font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.tasks-box li button:hover {
+.tasks-box button:hover {
   background-color: #3050d4;
 }
 
@@ -723,4 +723,52 @@ button:hover {
 .logout-actions button:last-child:hover {
   background-color: #ddd;
   color: #ddd;
+}
+
+/*tasks.html*/
+.tasks-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tasks-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.task-table th, .task-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.task-table th {
+  background-color: #f4f4f4;
+}
+
+.tasks-container button {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4070f4;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tasks-container button:hover {
+  background-color: #3050d4;
 }
