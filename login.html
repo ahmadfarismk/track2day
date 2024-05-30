@@ -39,6 +39,19 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" required>
                 </div>
+                <div class="input-group">
+                  <div class="input-group">
+                    <div class="options">
+                      <div class="option">
+                        <label for="admin">Admin</label>
+                        <input type="radio" id="admin" name="user_type" value="admin" required>
+                      </div>
+                      <div class="option">
+                        <label for="standard_user">User</label>
+                        <input type="radio" id="user" name="user_type" value="user" required>
+                      </div>
+                    </div>
+                </div>
                 <button type="submit">Login</button>
                 <p class="signup-link">Don't have an account? <a href="signup.html">Sign Up Now!</a></p>
             </form>

@@ -379,7 +379,7 @@ a:hover{
     padding: 7px;
 }
 
-/* Login */
+/* login.html */
 .login-container {
   display: flex;
   justify-content: center;
@@ -435,6 +435,26 @@ button {
 
 button:hover {
   background-color: #3050d4;
+}
+
+/* login.html [button option standard user or admin] */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+}
+
+.option label {
+  margin-left: 10px;
 }
 
 .signup-link {
@@ -835,3 +855,5 @@ button:hover {
   max-height: 30px;
   width: auto;
 }
+
+
