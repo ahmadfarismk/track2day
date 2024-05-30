@@ -781,3 +781,57 @@ button:hover {
 .task-table input[type="checkbox"] {
   cursor: pointer;
 }
+/*aboutus.html*/
+#about-title{
+  text-align: center;
+  margin-top: 100px;
+  color: var(--grey-color);
+  font-size: 28px;
+  font-weight: 700;
+}
+.about-container {
+  background-color: #ffffff;
+  padding: 15px 28px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 700px;
+  text-align: left;
+  margin: auto;
+  font-weight: normal;
+  font-size: medium;
+  margin-top: 50px;
+}
+.therapist-container-2{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.therapist-box{
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px 28px;
+  width: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: medium;
+}
+.therapist-box .center-align {
+  float: center;
+  margin-right: 15px;
+}
+.therapist-box .image {
+  max-height: 170px;
+  width: auto;
+}
+.therapist-box .desc{
+    text-align: justify;
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 15px;
+}
+.therapist-box .rating {
+  max-height: 30px;
+  width: auto;
+}
