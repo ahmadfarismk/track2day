@@ -24,7 +24,7 @@ while($row = mysqli_fetch_array($query)) {
 		echo"</tr>";
 		}
 		echo"</table>";
-		echo"<a href='register.php'>register</a><br>";
-		echo"<a href='login.php'>login</a>";
+		echo"<a href='register.html'>register</a><br>";
+		echo"<a href='login.html'>login</a>";
 	}	
 ?>
