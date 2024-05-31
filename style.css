@@ -860,4 +860,509 @@ button:hover {
   width: auto;
 }
 
+<<<<<<< Updated upstream
 
+=======
+.tools {
+  background-color: rgb(122, 119, 186);
+  color:#f5f5f5;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+}
+
+.form-container {
+  margin-top: 20px;
+}
+
+.form-container select, .form-container input[type="radio"] {
+  margin: 10px;
+  font-size: 20px;
+  font-family: monospace;
+}
+
+.button {
+  border: none;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 8px;
+  background-image: linear-gradient(to right, #a1a1c2 0%, #e6c8e2 60%);
+  font-size: 17px;
+  font-family: monospace;
+  cursor: pointer;
+}
+
+.tables {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: monospace;
+  font-size: 17px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.breathing-exercise {
+    background-color: rgb(122, 119, 186); 
+    color:#f5f5f5; 
+    border: 2px solid black; 
+    margin: auto; 
+    padding: 20px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    width: 40%;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+
+.title {
+  color: black;
+  /*   text-align: center; */
+  margin-top: 50px;
+  margin-left: 100px;
+  font-size: 70px;
+  font-family: Courier, monospace;
+}
+.date {
+  width: 435px;
+  margin: 15px;
+  margin-left: 125px;
+  font-family: monospace;
+}
+.moods {
+  margin: 15px;
+  margin-left: 300px;
+  font-size: 80px;
+}
+.mood1 {
+  margin-left: 150px;
+}
+.mood2 {
+  margin-left: 150px;
+}
+.mood3 {
+  margin-left: 150px;
+}
+.mood4 {
+  margin-left: 150px;
+}
+.mood5 {
+  margin-left: 150px;
+}
+.mood6 {
+  margin-left: 150px;
+}
+.button {
+  border: none;
+  border-radius: 5px;
+  margin-left: auto;
+  padding: 8px;
+  /*   background-color: #447aab; */
+  background-image: linear-gradient(to right, #a1a1c2 0%, #e6c8e2 60%);
+  font-size: 17px;
+  font-family: monospace;
+  cursor: pointer;
+  size: 0cap;
+}
+.tables {
+  margin-left: 45px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: monospace;
+  font-size: 17px;
+
+}
+.table,
+td {
+  width: 400px;
+  height: 40px;
+  border: 1px solid black;
+}
+.white {
+  background-color: #ffffff;
+}
+
+.mood-tracker {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.title {
+  font-size: 2em;
+  font-family: serif;
+  margin-bottom: auto;
+  margin-left: auto;
+}
+
+.date, .mood {
+  width: 100%;
+  margin-bottom: 20px;
+  margin-left: auto;
+}
+
+.moods {
+  margin: 5px 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.tables {
+  margin-top: 20px;
+  width: 80%;
+  border-collapse: collapse;
+}
+
+.tables th, .tables td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.tables tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tables th {
+  background-color: #4CAF50;
+  color: white;
+}
+.adminprofile-container {
+  display:inline-block;
+  margin: 50px auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* My Starter Template */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  line-height: 1.6;
+  background: rgba(175, 238, 238, 0.3);
+  color: lightcoral;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 900px;
+}
+
+/* Global Typography */
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+form,
+textarea {
+  font-size: 1rem;
+}
+
+button {
+  display: block;
+  font-size: 1.2rem;
+  padding: 0.5em 1em;
+  border: none;
+  background-color: aquamarine;
+  color: #0a2472;
+  font-family: 'Space Mono', monospace;
+}
+
+/* Section Container Positions, Spacing, Utilities */
+
+header {
+  text-align: center;
+  margin: 1em auto;
+}
+
+.section {
+  padding: 1em 1em;
+  width: 100%;
+  margin: 1em auto;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em 1em;
+}
+
+.container-row {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Button Standard */
+
+.btn-main,
+.btn-light,
+.btn-dark {
+  display: block;
+  padding: 0.6rem 2rem;
+  margin: 1rem;
+  transition: all 0.1s;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-main {
+  color: lightgoldenrodyellow;
+  background-color: lightcoral;
+}
+
+.btn-light {
+  color: #0a2472;
+  background-color: white;
+}
+
+.btn-dark {
+  color: white;
+  background-color: #0a2472;
+}
+
+button[class^='btn-']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover {
+  background-color: lightgoldenrodyellow;
+  color: lightcoral;
+  font-weight: 700;
+  transform: scale(1.08);
+}
+
+/* Project Starts Here */
+
+/* Journal Entry Section */
+
+/* Title */
+
+.entry-text-title {
+  width: 20em;
+  margin: 1em auto;
+  padding: 1em;
+  border-radius: 2px;
+  border: unset;
+  background-color: lightgoldenrodyellow;
+  font-family: 'Space Mono', monospace;
+}
+
+.entry-text-title:focus {
+  outline-color: lightcoral;
+  font-family: 'Space Mono', monospace;
+  color: lightcoral;
+  font-size: 1rem;
+}
+
+.entry-text-title::placeholder {
+  color: lightcoral;
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+}
+
+.entry-text-title::-ms-value {
+  color: lightcoral;
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+}
+
+/* Text Box */
+
+.container-row-journal {
+  display: flex;
+  justify-content: center;
+}
+
+.entry-form {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.journal-label {
+  display: block;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.entry-text-box {
+  width: 100%;
+  height: 20em;
+  margin: 1em auto;
+  padding: 1em;
+  border-radius: 2px;
+  border: unset;
+  background-color: lightgoldenrodyellow;
+  font-family: 'Space Mono', monospace;
+}
+
+@media (min-width: 769px) {
+  .entry-text-box {
+    width: 40em;
+    height: 20em;
+    margin: 1em auto;
+    padding: 1em;
+    border-radius: 2px;
+    border: unset;
+    background-color: lightgoldenrodyellow;
+    font-family: 'Space Mono', monospace;
+  }
+}
+
+.entry-text-box:focus {
+  outline-color: lightcoral;
+  font-family: 'Space Mono', monospace;
+  color: lightcoral;
+  font-size: 1rem;
+}
+
+.entry-text-box::placeholder {
+  color: lightcoral;
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+}
+
+.entry-submit-btn {
+  margin: 0;
+}
+
+/* Journal Results Section */
+
+.sectionEntryResults {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.entryResultRow {
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  margin: 1em auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.single-entry-div {
+  max-width: 100%;
+
+  margin: 1em auto;
+  padding: 1em 1em;
+}
+
+.single-entry-date {
+  background-color: lightgoldenrodyellow;
+  width: 100%;
+}
+
+.heading-results {
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: lightgoldenrodyellow;
+}
+>>>>>>> Stashed changes
