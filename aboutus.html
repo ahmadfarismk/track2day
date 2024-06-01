@@ -30,15 +30,18 @@
     <main>
         <h2 id="about-title">About us </h2>
         <div class="about-container">
-            <p>Welcome to Track2Day, a revolutionary web application designed to seamlessly integrate task management with mood tracking, promoting both productivity and mental well-being. Track2Day brings together a team of therapists dedicated to integrating task management and emotional well-being for a balanced life. </p>
-                <br><b>Our Mission</b><br>
-                <p>Track2Day enhances quality education and promotes good health and well-being, aligning with key Sustainable Development Goals (SDGs). Our mission is to provide tools for organizing tasks and gaining insights into emotional patterns, fostering a balanced lifestyle.</p>
-                <br><b>Our Vision</b><br>
-                <p> At Track2Day, our vision is to create a world where individuals seamlessly balance their personal and professional lives, achieving peak productivity while maintaining optimal mental and emotional well-being. We aim to be the leading platform that empowers users to understand and manage their tasks and moods, fostering a more mindful, organized, and fulfilling life for everyone.</p>
-                <br><b>Join Us</b><br>
-                <p>At Track2Day, we believe in a balanced approach to life management. Our features make us a valuable resource for enhancing productivity while maintaining mental health. Join us towards a more organized, productive, and emotionally balanced life.
-                    <br><br>Discover Track2Day today and take the first step towards a harmonious lifestyle.</p>
-        </div>
+          <p>Welcome to Track2Day, a revolutionary web application designed to seamlessly integrate task management with mood tracking, promoting both productivity and mental well-being. Track2Day brings together a team of therapists dedicated to integrating task management and emotional well-being for a balanced life.</p>
+          <div id="read-more-content" style="display: none;">
+              <b>Our Mission</b><br>
+              <p>Track2Day enhances quality education and promotes good health and well-being, aligning with key Sustainable Development Goals (SDGs). Our mission is to provide tools for organizing tasks and gaining insights into emotional patterns, fostering a balanced lifestyle.</p>
+              <br><b>Our Vision</b><br>
+              <p> At Track2Day, our vision is to create a world where individuals seamlessly balance their personal and professional lives, achieving peak productivity while maintaining optimal mental and emotional well-being. We aim to be the leading platform that empowers users to understand and manage their tasks and moods, fostering a more mindful, organized, and fulfilling life for everyone.</p>
+              <br><b>Join Us</b><br>
+              <p>At Track2Day, we believe in a balanced approach to life management. Our features make us a valuable resource for enhancing productivity while maintaining mental health. Join us towards a more organized, productive, and emotionally balanced life.
+                  <br><br>Discover Track2Day today and take the first step towards a harmonious lifestyle.</p>
+          </div>
+          <button onclick="toggleReadMore()">Read More</button>
+      </div>
         <h2 id="about-title">Our Therapists </h2>
         
         <div class="therapist-container-2">
@@ -91,7 +94,19 @@
         
     </main>
     
-
+    <script>
+      function toggleReadMore() {
+          const readMoreContent = document.getElementById('read-more-content');
+          const readMoreButton = document.querySelector('button');
+          if (readMoreContent.style.display === 'none') {
+              readMoreContent.style.display = 'block';
+              readMoreButton.textContent = 'Read Less';
+          } else {
+              readMoreContent.style.display = 'none';
+              readMoreButton.textContent = 'Read More';
+          }
+      }
+    </script>
 
 
   
