@@ -11,6 +11,7 @@ include('dbconn.php');
 
 $user_email = $_SESSION['email'];
 
+// User profile container
 // Fetch user information from the database
 $sql = "SELECT * FROM user WHERE user_email = '$user_email'";
 $result = mysqli_query($dbconn, $sql);
@@ -24,6 +25,39 @@ if ($result && mysqli_num_rows($result) > 0) {
     echo "Error: User data not found.";
     exit();
 }
+
+// Progress box
+// Fetch the count of completed tasks for the user
+$sql_completed_tasks = "SELECT COUNT(*) AS completed_tasks FROM task WHERE user_email = '$user_email' AND task_status = 'completed'";
+$result_completed_tasks = mysqli_query($dbconn, $sql_completed_tasks);
+
+if ($result_completed_tasks && mysqli_num_rows($result_completed_tasks) > 0) {
+    $row_completed_tasks = mysqli_fetch_assoc($result_completed_tasks);
+    $completed_tasks = $row_completed_tasks['completed_tasks'];
+} else {
+    // Default to 0 completed tasks if data not found
+    $completed_tasks = 0;
+}
+
+// Get the total number of tasks for the user
+$sql_total_tasks = "SELECT COUNT(*) AS total_tasks FROM task WHERE user_email = '$user_email'";
+$result_total_tasks = mysqli_query($dbconn, $sql_total_tasks);
+
+if ($result_total_tasks && mysqli_num_rows($result_total_tasks) > 0) {
+    $row_total_tasks = mysqli_fetch_assoc($result_total_tasks);
+    $total_tasks = $row_total_tasks['total_tasks'];
+} else {
+    // Default to 0 total tasks if data not found
+    $total_tasks = 0;
+}
+
+// Calculate progress percentage
+$progress_percentage = ($total_tasks > 0) ? ($completed_tasks / $total_tasks) * 100 : 0;
+
+// Tasks box
+// Fetch tasks for the user
+$sql_tasks = "SELECT * FROM task WHERE user_email = '$user_email'";
+$result_tasks = mysqli_query($dbconn, $sql_tasks);
 
 mysqli_close($dbconn);
 ?>
@@ -79,9 +113,9 @@ mysqli_close($dbconn);
             <div class="progress-box">
                 <h3>Progress</h3>
                 <div class="progress-circle">
-                    <span id="progress-percentage">0%</span>
+                    <span id="progress-percentage"><?php echo $progress_percentage; ?>%</span>
                 </div>
-                <p>Tasks Completed</p>
+                <p>Tasks Completed: <?php echo $completed_tasks; ?> / <?php echo $total_tasks; ?></p>
             </div>
             <div class="tasks-box">
                 <h3>Tasks</h3>
@@ -95,21 +129,19 @@ mysqli_close($dbconn);
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Task 1</td>
-                                <td>Not Completed</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Task 2</td>
-                                <td>Pending</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Task 3</td>
-                                <td>Completed</td>
-                            </tr>
+                        <?php
+                            if ($result_tasks && mysqli_num_rows($result_tasks) > 0) {
+                                while ($row_task = mysqli_fetch_assoc($result_tasks)) {
+                                    echo "<tr>";
+                                    echo "<td>" . $row_task['task_id'] . "</td>";
+                                    echo "<td>" . $row_task['task_name'] . "</td>";
+                                    echo "<td>" . $row_task['task_status'] . "</td>";
+                                    echo "</tr>";
+                                }
+                            } else {
+                                echo "<tr><td colspan='3'>No tasks found.</td></tr>";
+                            }
+                            ?>
                         </tbody>
                     </table>
                 </form>
