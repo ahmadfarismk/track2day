@@ -79,11 +79,12 @@ CREATE TABLE `mood` (
 --
 
 INSERT INTO `mood` (`mood_id`, `mood_score`, `mood_desc`) VALUES
-('M001', 5, 'Happy'),
-('M002', 3, 'Neutral'),
-('M003', 1, 'Sad'),
-('M004', 4, 'Content'),
-('M005', 2, 'Anxious');
+('M001', 6, 'Relaxed, Content'),
+('M002', 5, 'Energetic,Motivated'),
+('M003', 4, 'Average, Uneventful'),
+('M004', 3, 'Sick, Tired, Dull, Unmotivated'),
+('M005', 2, 'Sad, Lonely, Numb'),
+('M006', 1, 'Frustrated, Anxious, Grumpy');
 
 -- --------------------------------------------------------
 
