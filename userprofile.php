@@ -113,39 +113,43 @@ mysqli_close($dbconn);
             <div class="progress-box">
                 <h3>Progress</h3>
                 <div class="progress-circle">
-                    <span id="progress-percentage"><?php echo $progress_percentage; ?>%</span>
+                    <span id="progress-percentage"><?php echo round($progress_percentage); ?>%</span>
                 </div>
                 <p>Tasks Completed: <?php echo $completed_tasks; ?> / <?php echo $total_tasks; ?></p>
             </div>
             <div class="tasks-box">
                 <h3>Tasks</h3>
-                <form id="tasks-form">
-                    <table class="task-table">
-                        <thead>
-                            <tr>
-                                <th>No.</th>
-                                <th>Task Name</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                            if ($result_tasks && mysqli_num_rows($result_tasks) > 0) {
-                                while ($row_task = mysqli_fetch_assoc($result_tasks)) {
-                                    echo "<tr>";
-                                    echo "<td>" . $row_task['task_id'] . "</td>";
-                                    echo "<td>" . $row_task['task_name'] . "</td>";
-                                    echo "<td>" . $row_task['task_status'] . "</td>";
-                                    echo "</tr>";
-                                }
-                            } else {
-                                echo "<tr><td colspan='3'>No tasks found.</td></tr>";
+                <table class="task-table">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Task Name</th>
+                            <th>Task Due</th>
+                            <th>Task Description</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                        if ($result_tasks && mysqli_num_rows($result_tasks) > 0) {
+                            $task_number = 1;
+                            while ($row_task = mysqli_fetch_assoc($result_tasks)) {
+                                echo "<tr>";
+                                echo "<td>" . $task_number . "</td>";
+                                echo "<td>" . htmlspecialchars($row_task['task_name']) . "</td>";
+                                echo "<td>" . htmlspecialchars($row_task['task_duration']) . "</td>";
+                                echo "<td>" . htmlspecialchars($row_task['task_desc']) . "</td>";
+                                echo "<td>" . htmlspecialchars($row_task['task_status']) . "</td>";
+                                echo "</tr>";
+                                $task_number++;
                             }
-                            ?>
-                        </tbody>
-                    </table>
-                </form>
-                <button onclick="location.href='tasks.html'">Edit</button>
+                        } else {
+                            echo "<tr><td colspan='5'>No tasks found.</td></tr>";
+                        }
+                        ?>
+                    </tbody>
+                </table>
+                <button onclick="location.href='tasks.php'">Edit</button>
             </div>
         </div>
     </main>
