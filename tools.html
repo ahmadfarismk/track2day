@@ -87,56 +87,60 @@ HTML <!DOCTYPE html>
       </div>
     </section>
 
-    <section id="journal">
-      <head>
-        <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
-      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <title>My Journal</title>
-  </head>
-  <header><h1 class="title">My Personal Journal</h1></header>
-
-    <!-- Journal Entry Section -->
-    <section class="section journal-section">
-      <div class="container">
-        <div class="container-row container-row-journal">
-          <div class="container-item container-item-journal">
-            <form id="entryForm" action="">
-              <label for="entry-title" class="journal-label">Entry Title</label>
-              <input
-                type="text"
-                name="entry-title"
-                id="entry-title"
-                class="entry-text-title"
-                placeholder="Name of entry ✏️"
-              />
-              <label for="entry" class="journal-label">Today's Entry</label>
-              <textarea
-                name="daily-entry"
-                id="entry"
-                class="entry-text-box"
-                placeholder="What's on your mind today? 💭"
-              ></textarea>
-              <button class="btn-main entry-submit-btn" type="submit">Submit</button>
-            </form>
+    <section id="tools">
+      <section id="journal">
+        <head>
+          <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+        integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+        crossorigin="anonymous"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet"
+      />
+    </head>
+    <br> </br>
+    <header><h1 style="text-align: center;">My Personal Journal</h1></header>
+  
+      <!-- Journal Entry Section -->
+      <section class="section journal-section">
+        <div class="container">
+          <div class="container-row container-row-journal">
+            <div class="container-item container-item-journal">
+              <form id="entryForm" action="">
+                <label for="entry-title" class="journal-label">Entry Title</label>
+                <input
+                  type="text"
+                  name="entry-title"
+                  id="entry-title"
+                  class="entry-text-title"
+                  placeholder="Name of entry ✏️"
+                />
+                <label for="entry" class="journal-label">Today's Entry</label>
+                <textarea
+                  name="daily-entry"
+                  id="entry"
+                  class="entry-text-box"
+                  placeholder="What's on your mind today? 💭"
+                ></textarea>
+                <button class="btn-main entry-submit-btn" type="submit">Submit</button>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+      <!-- Journal Entry Results -->
+      <section class="section sectionEntryResults" id="entryResultsSection">
+        <div class="container">
+          <div class="container-row entryResultRow"></div>
+        </div>
+        <script src="index.js"></script>
+      </section>
     </section>
-    <!-- Journal Entry Results -->
-    <section class="section sectionEntryResults" id="entryResultsSection">
-      <div class="container">
-        <div class="container-row entryResultRow"></div>
-      </div>
-    </section>
-    <script src="index.js"></script>
+    
+    
 
   </main>
 
