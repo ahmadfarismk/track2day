@@ -1,3 +1,33 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['email'])) {
+    // Redirect to login page if user is not logged in
+    header("Location: login.html");
+    exit();
+}
+
+include('dbconn.php');
+
+$user_email = $_SESSION['email'];
+
+// Fetch user information from the database
+$sql = "SELECT * FROM user WHERE user_email = '$user_email'";
+$result = mysqli_query($dbconn, $sql);
+
+if ($result && mysqli_num_rows($result) > 0) {
+    $row = mysqli_fetch_assoc($result);
+    $user_fname = $row['user_fname'];
+    $user_lname = $row['user_lname'];
+} else {
+    // Error if user data is not found
+    echo "Error: User data not found.";
+    exit();
+}
+
+mysqli_close($dbconn);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,15 +43,15 @@
     <nav class="navbar">
         <div class="logo_item">
             <i class="bx bx-menu" id="sidebarOpen"></i>
-            <img src="icon.jpg" alt=""></i>Track2Day
+            <img src="icon.jpg" alt="Track2Day Logo">
         </div>
         <div class="navbar_content">
             <i class='bi bi-grid'></i>
             <i class='bx bx-sun' id="darkLight"></i>
             <i class='bx bx-bell'></i>
             <ul>
-                <li><a href="logout.html">Logout</a></li>
-                <li><a href="userprofile.html">Profile</a></li>
+                <li><a href="logout.php">Logout</a></li>
+                <li><a href="userprofile.php">Profile</a></li>
             </ul>
         </div>
     </nav>
@@ -31,17 +61,18 @@
             <h1>User Profile</h1>
             <div class="profile-details">
                 <div class="profile-pic">
-                    <img src="https://images.ps-aws.com/c?url=https%3A%2F%2Fd3cm515ijfiu6w.cloudfront.net%2Fwp-content%2Fuploads%2F2023%2F07%2F09170001%2Flando-norris-british-gp-celebration-2023-planetf1.jpg" alt="Profile Picture">
+                    <img src="nopfp.png" alt="Profile Picture">
                 </div>
-                <h2>Lando Norris <!--First name & Last name--></h2>
-                <!-- <p>Email: aliabu@gmail.com</p> -->
+                <div class="profile-details">
+                    <p><strong>Name: </strong><?php echo htmlspecialchars($user_fname) . ' ' . htmlspecialchars($user_lname); ?></p>
+                    <p><strong>Email: </strong><?php echo htmlspecialchars($user_email); ?></p>
+                </div>
             </div>
-        
 
-        <div class="profile-actions">
-            <button onclick="location.href='editprofile.html'">Edit Profile</button>
-            <button onclick="location.href='changepassword.html'">Change Password</button>
-        </div>
+            <div class="profile-actions">
+                <button onclick="location.href='editprofile.html'">Edit Profile</button>
+                <button onclick="location.href='changepassword.html'">Change Password</button>
+            </div>
         </div>
 
         <div class="progress-task-container">
@@ -49,7 +80,6 @@
                 <h3>Progress</h3>
                 <div class="progress-circle">
                     <span id="progress-percentage">0%</span>
-                    
                 </div>
                 <p>Tasks Completed</p>
             </div>
@@ -82,14 +112,11 @@
                             </tr>
                         </tbody>
                     </table>
-                    
                 </form>
                 <button onclick="location.href='tasks.html'">Edit</button>
             </div>
         </div>
     </main>
-
-    <!--<script src="script.js"></script> -->
 </body>
 
 <footer>
@@ -97,33 +124,28 @@
         <div class="footer-content">
             <h3>Contact Us</h3>
             <p>Email: track2day@enquiries.com</p>
-            <p>Phone:+ 03-84532900</p>
+            <p>Phone: +03-84532900</p>
             <p>Address: 56 Jln 14/48 Seksyen 14 Petaling Jaya</p>
         </div>
         <div class="footer-content">
             <h3>Quick Links</h3>
-             <ul class="list">
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Products</a></li>
-                <li><a href="">Contact</a></li>
-             </ul>
+            <ul class="list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
         <div class="footer-content">
             <h3>Follow Us</h3>
             <ul class="social-icons">
-             <!-- <li><a href=""><i class="bi bi-facebook"></i></a></li>
-             <li><a href=""><i class="fab fa-twitter"></i></a></li>
-             <li><a href=""><i class="fab fa-instagram"></i></a></li>
-             <li><a href=""><i class="fab fa-linkedin"></i></a></li> -->
+                <!-- Social media links -->
             </ul>
-            </div>
+        </div>
     </div>
     <div class="bottom-bar">
-        <p>&copy; 2023 Track2Day . All rights reserved</p>
-        
-        
+        <p>&copy; 2023 Track2Day. All rights reserved</p>
     </div>
 </footer>
 </html>

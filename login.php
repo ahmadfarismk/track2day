@@ -30,7 +30,7 @@ if ($user_type == 'admin') {
     $field2 = "user_fname";
     $field3 = "user_lname";
     $field4 = "user_password";
-    $location = "tools.html";
+    $location = "userprofile.php";
 }
 
 # Check if the email exists
@@ -44,6 +44,7 @@ if (mysqli_num_rows($result_email_check) == 1) {
     # Check if the password matches
     if ($data[$field4] === $password) {
         # Login successful, assign session variables
+        $_SESSION['email'] = $email;
         $_SESSION['fname'] = $data[$field2];
         $_SESSION['lname'] = $data[$field3];
         echo "<script>
