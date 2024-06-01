@@ -1015,7 +1015,7 @@ body {
   margin-left: auto;
   padding: 8px;
   /*   background-color: #447aab; */
-  background-image: linear-gradient(to right, #a1a1c2 0%, #5162e3 60%);
+  background-image: linear-gradient(to right, #515181 0%, #312fb0 60%);
   font-size: 17px;
   font-family: monospace;
   cursor: pointer;
@@ -1107,16 +1107,7 @@ td {
   background-color: #4CAF50;
   color: white;
 }
-.adminprofile-container {
-  display:inline-block;
-  margin: 50px auto;
-  max-width: 800px;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-/* My Starter Template */
+
 
 *,
 *::before,
@@ -1181,7 +1172,7 @@ input[class^='btn-']:hover {
   transform: scale(1.08);
 }
 
-/* Project Starts Here */
+
 
 /* Journal Entry Section */
 
@@ -1323,4 +1314,57 @@ input[class^='btn-']:hover {
   text-align: center;
   text-decoration: underline;
   text-decoration-color: lightgoldenrodyellow;
+}
+.adminprofile-container {
+  display:inline-block;
+  margin: 50px auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.profile-details {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile-actions {
+  margin-top: 20px;
+}
+
+.data-tables {
+  padding: 20px;
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f9;
 }
