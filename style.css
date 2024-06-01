@@ -862,11 +862,12 @@ button:hover {
 
 
 .tools {
-  background-color: rgb(122, 119, 186);
+  background-color: #4070f4;
   color:#f5f5f5;
-  border: 2px solid black;
+  border: 2px solid rgb(143, 143, 224);
   margin: 20px;
   padding: 20px;
+  font-family: sans-serif;
 }
 
 .form-container {
@@ -876,7 +877,7 @@ button:hover {
 .form-container select, .form-container input[type="radio"] {
   margin: 10px;
   font-size: 20px;
-  font-family: monospace;
+  font-family:sans-serif;
 }
 
 .button {
@@ -884,7 +885,7 @@ button:hover {
   border-radius: 20px;
   margin: 10px;
   padding: 8px;
-  background-image: linear-gradient(to right, #a1a1c2 0%, #e6c8e2 60%);
+  background-image: linear-gradient(to right, #a1a1c2 0%, #5b6eae 60%);
   font-size: 17px;
   font-family: monospace;
   cursor: pointer;
@@ -902,9 +903,9 @@ button:hover {
 }
 
 .breathing-exercise {
-    background-color: rgb(122, 119, 186); 
+    background-color: #4070f4; 
     color:#f5f5f5; 
-    border: 2px solid black; 
+    border: 2px solid rgb(143, 143, 224);
     margin: auto; 
     padding: 20px; 
     display: flex; 
@@ -1047,6 +1048,7 @@ td {
   width: 300px;
   text-align: center;
   margin: 50px auto;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .title {
@@ -1157,24 +1159,24 @@ td {
 
 .btn-main {
   color: lightgoldenrodyellow;
-  background-color: lightcoral;
+  background-color: rgb(16, 15, 80);
 }
 
 .btn-light {
-  color: #0a2472;
-  background-color: white;
+  color: #3e5085;
+  background-color: rgb(93, 109, 143);
 }
 
 .btn-dark {
   color: white;
-  background-color: #0a2472;
+  background-color: #576385;
 }
 
 button[class^='btn-']:hover,
 a[class^='btn-']:hover,
 input[class^='btn-']:hover {
-  background-color: lightgoldenrodyellow;
-  color: lightcoral;
+  background-color: rgb(144, 148, 180);
+  color: rgb(192, 192, 192);
   font-weight: 700;
   transform: scale(1.08);
 }
@@ -1184,14 +1186,26 @@ input[class^='btn-']:hover {
 /* Journal Entry Section */
 
 /* Title */
+.journal {
+  background-color: #4070f4; 
+  color:#070707; 
+  border: 2px solid rgb(143, 143, 224);
+  margin: auto; 
+  padding: 20px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
+  width: 40%;
 
+}
 .entry-text-title {
   width: 20em;
   margin: 1em auto;
   padding: 1em;
   border-radius: 2px;
   border: unset;
-  background-color: lightgoldenrodyellow;
+  background-color: rgb(50, 69, 150);
   font-family: 'Space Mono', monospace;
 }
 
@@ -1240,7 +1254,7 @@ input[class^='btn-']:hover {
   padding: 1em;
   border-radius: 2px;
   border: unset;
-  background-color: lightgoldenrodyellow;
+  background-color: rgb(50, 69, 150);
   font-family: 'Space Mono', monospace;
 }
 
@@ -1252,7 +1266,7 @@ input[class^='btn-']:hover {
     padding: 1em;
     border-radius: 2px;
     border: unset;
-    background-color: lightgoldenrodyellow;
+    background-color: rgb(50, 69, 150);
     font-family: 'Space Mono', monospace;
   }
 }
@@ -1272,6 +1286,7 @@ input[class^='btn-']:hover {
 
 .entry-submit-btn {
   margin: 0;
+  color:rgb(91, 99, 135)
 }
 
 /* Journal Results Section */
