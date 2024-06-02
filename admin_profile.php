@@ -1,13 +1,12 @@
 <?php
+// Database connection setup
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "track2daydb";
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -27,4 +26,7 @@ $therapist_sql = "SELECT * FROM user WHERE user_email IN (SELECT user_email FROM
 $therapist_result = $conn->query($therapist_sql);
 
 $conn->close();
+
+// Pass data to the view
+include 'admin_profile_view.php';
 ?>
