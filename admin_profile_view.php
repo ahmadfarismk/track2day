@@ -14,6 +14,7 @@
     <div class="logo_item">
       <i class="bx bx-menu" id="sidebarOpen"></i>
       <img src="icon.jpg" alt="">Track2Day
+      <a href="menu.html">Track2Day</a>
     </div>
     <div class="navbar_content">
       <i class='bi bi-grid'></i>
@@ -109,35 +110,27 @@
 
   <footer>
     <div class="footer-container">
-      <div class="footer-content">
-        <h3>Contact Us</h3>
-        <p>Email: track2day@enquiries.com</p>
-        <p>Phone:+ 03-84532900</p>
-        <p>Address: 56 Jln 14/48 Seksyen 14 Petaling Jaya</p>
-      </div>
-      <div class="footer-content">
-        <h3>Quick Links</h3>
-        <ul class="list">
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">Products</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-content">
-        <h3>Follow Us</h3>
-        <ul class="social-icons">
-          <!-- <li><a href=""><i class="bi bi-facebook"></i></a></li>
-          <li><a href=""><i class="fab fa-twitter"></i></a></li>
-          <li><a href=""><i class="fab fa-instagram"></i></a></li>
-          <li><a href=""><i class="fab fa-linkedin"></i></a></li> -->
-        </ul>
-      </div>
+        <div class="footer-content">
+            <h3>Contact Us</h3>
+            <p>Email: track2day@enquiries.com</p>
+            <p>Phone:+ 03-84532900</p>
+            <p>Address: 56 Jln 14/48 Seksyen 14 Petaling Jaya</p>
+        </div>
+        <div class="footer-content">
+            <h3>Quick Links</h3>
+             <ul class="list">
+                <li><a href="menu.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="login.html">Log In</a></li>
+             </ul>
+        </div>
+        
     </div>
     <div class="bottom-bar">
-      <p>&copy; 2023 Track2Day. All rights reserved</p>
+        <p>&copy; 2023 Track2Day . All rights reserved</p>
+        
+        
     </div>
-  </footer>
+</footer>
 </body>
 </html>
