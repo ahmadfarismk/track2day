@@ -22,6 +22,7 @@
         <div class="logo_item">
             <i class="bx bx-menu" id="sidebarOpen"></i>
             <img src="icon.jpg" alt="Track2Day Logo">
+            <a href="menu.html">Track2Day</a>
         </div>
         <div class="navbar_content">
             <i class='bi bi-grid'></i>
