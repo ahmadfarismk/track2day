@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 30, 2024 at 02:25 PM
+-- Generation Time: Jun 02, 2024 at 06:53 PM
 -- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -98,7 +98,7 @@ INSERT INTO `mood` (`mood_id`, `mood_score`, `mood_desc`) VALUES
 --
 
 CREATE TABLE `task` (
-  `task_id` varchar(11) NOT NULL,
+  `task_id` int(11) NOT NULL,
   `task_name` varchar(45) NOT NULL,
   `task_desc` varchar(45) NOT NULL,
   `task_duration` date DEFAULT NULL,
@@ -111,11 +111,15 @@ CREATE TABLE `task` (
 --
 
 INSERT INTO `task` (`task_id`, `task_name`, `task_desc`, `task_duration`, `task_status`, `user_email`) VALUES
-('T001', 'Task 1', 'Description 1', '2024-06-01', 'Incomplete', 'max@gmail.com'),
-('T002', 'Task 2', 'Description 2', '2024-06-02', 'Complete', 'carlos@gmail.com'),
-('T003', 'Task 3', 'Description 3', '2024-06-03', 'Pending', 'lewis@gmail.com'),
-('T004', 'Task 4', 'Description 4', '2024-06-04', 'Complete', 'max@gmail.com'),
-('T005', 'Task 5', 'Description 5', '2024-06-05', 'Incomplete', 'lando@gmail.com');
+(1001, 'Task 1', 'Description 1', '2024-06-01', 'Incomplete', 'max@gmail.com'),
+(1002, 'Task 2', 'Description 2', '2024-06-02', 'Complete', 'carlos@gmail.com'),
+(1003, 'Task 3', 'Description 3', '2024-06-03', 'Pending', 'lewis@gmail.com'),
+(1004, 'Task 4', 'Description 4', '2024-06-04', 'Complete', 'max@gmail.com'),
+(1005, 'Task 5', 'Description 5', '2024-06-05', 'Incomplete', 'lando@gmail.com'),
+(1006, 'Lumba haram', 'DDU DDU DDUU', '2024-06-28', 'completed', 'max@gmail.com'),
+(1007, 'Gi masjid', 'coding', '2024-06-01', 'completed', 'max@gmail.com'),
+(1008, 'jumpa max', 'lumba haram', '2024-06-08', 'completed', 'carlos@gmail.com'),
+(1009, 'taubat', 'ingat tuhan', '2024-06-16', 'completed', 'carlos@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -207,6 +211,16 @@ ALTER TABLE `user`
 ALTER TABLE `user_mood`
   ADD PRIMARY KEY (`user_email`,`mood_id`),
   ADD KEY `fk_mood_id_user_mood` (`mood_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `task`
+--
+ALTER TABLE `task`
+  MODIFY `task_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1010;
 
 --
 -- Constraints for dumped tables

@@ -3,7 +3,7 @@
 	$user = "root"; 			//mysqlusername
 	$pass = ""; 				//mysqlpassword
 	$host = "localhost"; 		//server name or ipaddress
-	$dbname= "track2daydb2"; 	//your db name
+	$dbname= "track2daydb"; 	//your db name
 
 	#echo "<b>User 			: </b>" .$user ."<br>";
 	#echo "<b>Password		: </b>" .$pass ."<br>";

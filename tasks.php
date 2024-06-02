@@ -22,7 +22,6 @@
         <div class="logo_item">
             <i class="bx bx-menu" id="sidebarOpen"></i>
             <img src="icon.jpg" alt="Track2Day Logo">
-            <a href="menu.html">Track2Day</a>
         </div>
         <div class="navbar_content">
             <i class='bi bi-grid'></i>
@@ -64,7 +63,7 @@
                                 echo "<td><input type='date' name='task_duration[]' value='" . htmlspecialchars($row_task['task_duration']) . "'></td>";
                                 echo "<td><input type='text' name='task_desc[]' value='" . htmlspecialchars($row_task['task_desc']) . "'></td>";
                                 echo "<td><select name='task_status[]'><option value='pending'" . ($row_task['task_status'] == 'pending' ? ' selected' : '') . ">Pending</option><option value='completed'" . ($row_task['task_status'] == 'completed' ? ' selected' : '') . ">Completed</option></select></td>";
-                                echo "<td><button type='button' class='delete-task'>Delete</button></td>";
+                                echo "<td><button type='submit' class='delete-task'>Delete</button></td>";
                                 echo "</tr>";
                             }
                         }
@@ -72,7 +71,7 @@
                     </tbody>
                 </table>
                 <button type="button" id="add-task">Add Task</button>
-                <button type="submit">Save Changes</button>
+                <button type="submit" name="save">Save Changes</button>
             </form>
         </div>
     </main>
@@ -86,7 +85,7 @@
                 <td><input type="date" name="task_duration[]"></td>
                 <td><input type="text" name="task_desc[]"></td>
                 <td><select name="task_status[]"><option value="pending">Pending</option><option value="completed">Completed</option></select></td>
-                <td><button type="button" class="delete-task">Delete</button></td>
+                <td><button type="submit" class="delete-task">Delete</button></td>
             `;
         });
 
