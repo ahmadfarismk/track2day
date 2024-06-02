@@ -23,9 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (!empty($user_lname)) {
         $update_fields[] = "user_lname = '$user_lname'";
     }
-    if (!empty($user_lname)) {
-        $update_fields[] = "user_email = '$user_email'";
-    }
 
     // If there are fields to update
     if (!empty($update_fields)) {
