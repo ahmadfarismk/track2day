@@ -168,7 +168,7 @@ mysqli_close($dbconn);
             <h3>Quick Links</h3>
              <ul class="list">
                 <li><a href="menu2.php">Home</a></li>
-                <li><a href="aboutus.html">About</a></li>
+                <li><a href="aboutus2.php">About</a></li>
                 <li><a href="login.html">Log In</a></li>
              </ul>
         </div>
