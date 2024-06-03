@@ -72,24 +72,26 @@ if ($result && mysqli_num_rows($result) > 0) {
     </nav>
     
     <main>
-        <h2 id="title">Welcome to Track2Day! <br> Tracking mood is now ease! </h2>
+        <h2 id="title">Welcome to Track2Day! <br> Tracking mood is now ease! </h2><br>
         <div class="container">
             <p>“Pleasure in the job puts perfection in the work.”<br> - Aristotle</p>
-            <button>Join Us Now!</button>
+            <!--<button>Join Us Now!</button> -->
         </div>
         <!-- Sections -->
         <div class="container-2">
-            <div class="box">
+            <!-- <div class="box">
               <h2>Daily Goals</h2>
               <p></p>
-            </div>
+            </div> -->
             <div class="box">
               <h2>Tasks</h2>
-              <p> </p>
+              <p></p>
+              <button onclick="location.href='tasks.php'">Tasks</button>
             </div>
             <div class="box">
               <h2>Tools</h2>
-              <p></p>
+              <p>Log on your daily mood, breathing exercise and write your journal today!</p>
+              <button onclick="location.href='tools.html'">tools</button>
             </div>
           </div>
 
