@@ -423,6 +423,14 @@ a:hover{
   border-radius: 5px;
   font-size: 16px;
 }
+.input-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--grey-color-light);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
 
 button {
   width: 100%;
