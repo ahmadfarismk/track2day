@@ -78,7 +78,7 @@ mysqli_close($dbconn);
         <div class="logo_item">
             <i class="bx bx-menu" id="sidebarOpen"></i>
             <img src="icon.jpg" alt="Track2Day Logo">
-            <a href="menu.html">Track2Day</a>
+            <a href="menu2.php">Track2Day</a>
         </div>
         <div class="navbar_content">
             <i class='bi bi-grid'></i>
@@ -167,7 +167,7 @@ mysqli_close($dbconn);
         <div class="footer-content">
             <h3>Quick Links</h3>
              <ul class="list">
-                <li><a href="menu.html">Home</a></li>
+                <li><a href="menu2.php">Home</a></li>
                 <li><a href="aboutus.html">About</a></li>
                 <li><a href="login.html">Log In</a></li>
              </ul>
