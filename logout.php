@@ -25,7 +25,8 @@
         <h1>Are you sure you want to log out?</h1>
         <div class="logout-actions">
             <form method="post">
-                <button type="submit" name="logout">Yes, Logout</button>
+                <button type="submit" name="logout">Yes</button>
+            
             </form>
             <button onclick="cancelLogout()">Cancel</button>
         </div>
