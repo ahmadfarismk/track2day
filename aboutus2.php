@@ -87,13 +87,13 @@ if ($result && mysqli_num_rows($result) > 0) {
               </div>
               <div class="therapist-box">
                 <h2>Dr. Auni</h2>
-                <img src="messi.jpg" class="center-align image">
+                <img src="auni.png" class="center-align image">
                 <br>
                 <img src="rating.jpg" class="center-align rating">
                 <img src="rating.jpg" class="center-align rating">
                 <img src="rating.jpg" class="center-align rating">
                 <img src="rating.jpg" class="center-align rating">
-                <p class="desc">Dr. Zarith, clinical psychologist, uses cognitive-behavioral therapy to help clients with anxiety, depression, and trauma.</p>
+                <p class="desc">Dr. Auni, clinical psychologist, uses cognitive-behavioral therapy to help clients with anxiety, depression, and trauma.</p>
               </div>
               
         </div>
@@ -107,7 +107,7 @@ if ($result && mysqli_num_rows($result) > 0) {
                 <img src="rating.jpg" class="center-align rating">
                 <img src="rating.jpg" class="center-align rating">
                 <img src="rating.jpg" class="center-align rating">
-                <p class="desc">Dr. Zarith, clinical psychologist, uses cognitive-behavioral therapy to help clients with anxiety, depression, and trauma.</p>
+                <p class="desc">Dr. Faris, clinical psychologist, uses cognitive-behavioral therapy to help clients with anxiety, depression, and trauma.</p>
               </div>
               <div class="therapist-box">
                 <h2>Dr. Syakir</h2>
@@ -117,7 +117,7 @@ if ($result && mysqli_num_rows($result) > 0) {
                 <img src="rating.jpg" class="center-align rating">
                 <img src="rating.jpg" class="center-align rating">
                 
-                <p class="desc">Dr. Zarith, clinical psychologist, uses cognitive-behavioral therapy to help clients with anxiety, depression, and trauma.</p>
+                <p class="desc">Dr. Syakir, clinical psychologist, uses cognitive-behavioral therapy to help clients with anxiety, depression, and trauma.</p>
               </div>
         </div>
         
