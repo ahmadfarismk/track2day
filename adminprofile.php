@@ -34,6 +34,11 @@ $therapist_sql = "SELECT * FROM admin"; // Assuming therapists are stored in the
 $therapist_result = mysqli_query($dbconn, $therapist_sql);
 
 mysqli_close($dbconn);
+
+// Mask the passwords with dots
+function maskPassword($password) {
+    return str_repeat('•', strlen($password));
+}
 ?>
 
 <!DOCTYPE html>
@@ -103,7 +108,7 @@ mysqli_close($dbconn);
                         <td><?php echo htmlspecialchars($user_row['user_email']); ?></td>
                         <td><?php echo htmlspecialchars($user_row['user_fname']); ?></td>
                         <td><?php echo htmlspecialchars($user_row['user_lname']); ?></td>
-                        <td><?php echo htmlspecialchars($user_row['user_password']); ?></td>
+                        <td><?php echo maskPassword($user_row['user_password']); ?></td>
                         <td>
                             <form action="delete.php" method="post">
                                 <input type="hidden" name="user_email" value="<?php echo htmlspecialchars($user_row['user_email']); ?>">
@@ -134,7 +139,7 @@ mysqli_close($dbconn);
                         <td><?php echo htmlspecialchars($therapist_row['adm_email']); ?></td>
                         <td><?php echo htmlspecialchars($therapist_row['adm_fname']); ?></td>
                         <td><?php echo htmlspecialchars($therapist_row['adm_lname']); ?></td>
-                        <td><?php echo htmlspecialchars($therapist_row['adm_password']); ?></td>
+                        <td><?php echo maskPassword($therapist_row['adm_password']); ?></td>
                     </tr>
                     <?php } ?>
                 </tbody>
