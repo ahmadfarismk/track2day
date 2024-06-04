@@ -27,13 +27,19 @@
             <form method="post">
                 <button type="submit" name="logout">Yes</button>
             </form>
-            <button onclick="cancelLogout()">Cancel</button>
+            <button onclick="cancelLogout('<?php echo $user_type; ?>')">Cancel</button>
         </div>
     </div>
 
     <script>
-        function cancelLogout() {
-            window.location.href = "userprofile.php";
+        function cancelLogout(userType) {
+            if (userType === 'user') {
+                window.location.href = "userprofile.php";
+            } else if (userType  === 'admin') {
+                window.location.href = "adminprofile.php";
+            } else {
+                window.location.href = "login.html";
+            }
         }
     </script>
 </body>

@@ -11,7 +11,6 @@ include('dbconn.php');
 
 $adm_email = $_SESSION['email'];
 
-// Admin profile container
 // Fetch admin information from the database
 $sql = "SELECT * FROM admin WHERE adm_email = '$adm_email'";
 $result = mysqli_query($dbconn, $sql);
@@ -46,7 +45,6 @@ mysqli_close($dbconn);
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <title>Track2Day</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <!-- navbar -->
@@ -101,13 +99,16 @@ mysqli_close($dbconn);
                 </thead>
                 <tbody>
                     <?php while ($user_row = mysqli_fetch_assoc($user_result)) { ?>
-                    <tr>
+                    <tr id="user-<?php echo htmlspecialchars($user_row['user_email']); ?>">
                         <td><?php echo htmlspecialchars($user_row['user_email']); ?></td>
                         <td><?php echo htmlspecialchars($user_row['user_fname']); ?></td>
                         <td><?php echo htmlspecialchars($user_row['user_lname']); ?></td>
                         <td><?php echo htmlspecialchars($user_row['user_password']); ?></td>
                         <td>
-                        <button onclick="deleteUser('user-<?php echo htmlspecialchars($user_row['user_email']); ?>')">Delete</button>
+                            <form action="delete.php" method="post">
+                                <input type="hidden" name="user_email" value="<?php echo htmlspecialchars($user_row['user_email']); ?>">
+                                <button type="submit" onclick="return confirm('Are you sure you want to delete this user?')">Delete</button>
+                            </form>
                         </td>
                     </tr>
                     <?php } ?>
@@ -140,16 +141,6 @@ mysqli_close($dbconn);
             </table>
         </div>
     </main>
-    <script> //otw
-        function deleteUser(rowId) {
-            if (confirm('Are you sure you want to delete this user?')) {
-                //delete particular user info
-                document.getElementById(rowId).style.display = 'none';
-            }
-        }
-    </script>
-    
-    </body>
 
     <footer>
         <div class="footer-container">
@@ -172,4 +163,5 @@ mysqli_close($dbconn);
             <p>&copy; 2023 Track2Day. All rights reserved</p>
         </div>
     </footer>
+</body>
 </html>
