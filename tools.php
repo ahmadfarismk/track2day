@@ -38,55 +38,57 @@ HTML <!DOCTYPE html>
   <main>
     <br>
     <section id="mood-tracker">
-      <h1 style="text-align: center;">How are you feeling today?</h1>
-      <div class="tools">
-        <h2 style="text-align: left";>Mood Tracker</h2>
-        <form id="mood-form" action="submit_entry.php" method="post"> 
-        <select id="week" name="week" class="date">
-          <option value="Monday">Monday</option>
-          <option value="Tuesday">Tuesday</option>
-          <option value="Wednesday">Wednesday</option>
-          <option value="Thursday">Thursday</option>
-          <option value="Friday">Friday</option>
-          <option value="Saturday">Saturday</option>
-          <option value="Sunday">Sunday</option>
-        </select><br>
-        <div class="mood">
-          <input type="radio" id="mood1" name="mood" value="Joyful, Happy, Relaxed, Silly, Content, Great">
-          <label for="mood1"> Relaxed, Content</label><br>
-          
-          <input type="radio" id="mood2" name="mood" value="Productive, Active, Energetic, Motivated">
-          <label for="mood2">Energetic, Motivated</label><br>
-  
-          <input type="radio" id="mood3" name="mood" value="Average, Normal, Uneventful, Good">
-          <label for="mood3">Average, Uneventful</label><br>
-  
-          <input type="radio" id="mood4" name="mood" value="Sick, Tired, Lazy, Dull, Unmotivated, Bored">
-          <label for="mood4">Sick, Tired, Dull, Unmotivated</label><br>
-  
-          <input type="radio" id="mood5" name="mood" value="Sad, Lonely, Numb, Depressed, Insecure">
-          <label for="mood5">Sad, Lonely, Numb</label><br>
-  
-          <input type="radio" id="mood6" name="mood" value="Angry, Frustrated, Anxious, Grumpy">
-          <label for="mood6">Frustrated, Anxious, Grumpy</label><br><br>
-  
-          <button id="button1" class="button">Submit</button>
-          <button id="button2" class="button">Delete</button>
-        </form>
-        </div>
-        <div>
-          <table id="table" class="tables">
-            <thead>
-              <tr>
-                <td class="white">Weekday</td>
-                <td class="white">Mood</td>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+  <h1 style="text-align: center;">How are you feeling today?</h1>
+  <div class="tools">
+    <h2 style="text-align: left;">Mood Tracker</h2>
+    <form id="mood-form" action="submit_entry.php" method="post"> 
+      <label for="journal-id">Journal ID:</label>
+      <input type="text" id="journal-id" name="journal_id" required><br><br>
+      <select id="week" name="week" class="date">
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+        <option value="Sunday">Sunday</option>
+      </select><br>
+      <div class="mood">
+        <input type="radio" id="mood1" name="mood" value="Joyful, Happy, Relaxed, Silly, Content, Great">
+        <label for="mood1"> Relaxed, Content</label><br>
+        
+        <input type="radio" id="mood2" name="mood" value="Productive, Active, Energetic, Motivated">
+        <label for="mood2">Energetic, Motivated</label><br>
+
+        <input type="radio" id="mood3" name="mood" value="Average, Normal, Uneventful, Good">
+        <label for="mood3">Average, Uneventful</label><br>
+
+        <input type="radio" id="mood4" name="mood" value="Sick, Tired, Lazy, Dull, Unmotivated, Bored">
+        <label for="mood4">Sick, Tired, Dull, Unmotivated</label><br>
+
+        <input type="radio" id="mood5" name="mood" value="Sad, Lonely, Numb, Depressed, Insecure">
+        <label for="mood5">Sad, Lonely, Numb</label><br>
+
+        <input type="radio" id="mood6" name="mood" value="Angry, Frustrated, Anxious, Grumpy">
+        <label for="mood6">Frustrated, Anxious, Grumpy</label><br><br>
+
+        <button id="button1" class="button">Submit</button>
+        <button id="button2" class="button">Delete</button>
+      </form>
+    </div>
+    <div>
+      <table id="table" class="tables">
+        <thead>
+          <tr>
+            <td class="white">Weekday</td>
+            <td class="white">Mood</td>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</section>
 
     <br>
 
