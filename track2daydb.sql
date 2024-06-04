@@ -128,7 +128,7 @@ CREATE TABLE `user` (
   `user_fname` varchar(45) NOT NULL,
   `user_lname` varchar(45) NOT NULL,
   `user_password` varchar(45) NOT NULL,
-  `adm_email` varchar(45) NOT NULL
+  `adm_email` varchar(45) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -155,26 +155,31 @@ INSERT INTO `user` (`user_email`, `user_fname`, `user_lname`, `user_password`, `
 --
 
 CREATE TABLE `user_mood` (
-  'week' varchar(20) NOT NULL,
+  `week` varchar(20) NOT NULL,
   `user_email` varchar(45) NOT NULL,
   `mood_id` varchar(11) NOT NULL,
-  FOREIGN KEY (user_email) REFERENCES user(user_email),
-  FOREIGN KEY (mood_id) REFERENCES mood(mood_id)
+  PRIMARY KEY (`week`,`user_email`,`mood_id`),
+  KEY `fk_mood_id_user_mood` (`mood_id`),
+  KEY `fk_user_email_user_mood` (`user_email`),
+  FOREIGN KEY (mood_id) REFERENCES mood(mood_id),
+  FOREIGN KEY (user_email) REFERENCES user(user_email)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Dumping data for table `user_mood`
 --
 
-INSERT INTO `user_mood` (`user_email`, `mood_id`) VALUES
-('Monday','carlos@gmail.com', 'M002'),
-('Tuesday','charles@gmail.com', 'M005'),
-('Wednesday','lando@gmail.com', 'M003'),
-('Thursday','lando@gmail.com', 'M004'),
-('Saturday','lewis@gmail.com', 'M001');
+INSERT INTO `user_mood` (`week`, `user_email`, `mood_id`) VALUES
+('Monday', 'carlos@gmail.com', 'M002'),
+('Tuesday', 'charles@gmail.com', 'M005'),
+('Wednesday', 'lando@gmail.com', 'M003'),
+('Thursday', 'lando@gmail.com', 'M004'),
+('Saturday', 'lewis@gmail.com', 'M001');
 
 --
 -- Indexes for dumped tables
 --
+
 
 --
 -- Indexes for table `admin`
