@@ -1,24 +1,21 @@
 <?php
+include 'dbconn.php'; // Include the database connection file
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Check if both date and entry fields are set
-    if (isset($_POST['date']) && isset($_POST['entry'])) {
-        $date = $_POST['date'];
-        $entry = $_POST['entry'];
+    // Check if both week and mood fields are set
+    if (isset($_POST['week']) && isset($_POST['mood'])) {
+        $week = $_POST['week'];
+        $mood = $_POST['mood'];
 
-        // Validate if date and entry are not empty
-        if (!empty($date) && !empty($entry)) {
-            // Escape HTML entities to prevent XSS attacks
-            $date = htmlspecialchars($date);
-            $entry = nl2br(htmlspecialchars($entry));
+        // Perform SQL query to insert data into the database
+        $query = "INSERT INTO `user_mood` (`user_email`, `mood_id`) VALUES ('$week', '$mood')";
+        mysqli_query($dbconn, $query);
 
-            echo "<h2>Journal Entry Submitted</h2>";
-            echo "<p><strong>Date:</strong> $date</p>";
-            echo "<p><strong>Entry:</strong> $entry</p>";
-        } else {
-            echo "<p>Please fill in all fields.</p>";
-        }
+        // Redirect back to tools.html or do something else
+        header("Location: tools.html");
+        exit();
     } else {
-        echo "<p>Invalid form submission.</p>";
+        echo "<p>Please fill in all fields.</p>";
     }
 } else {
     echo "<p>Invalid request method.</p>";

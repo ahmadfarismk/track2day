@@ -8,8 +8,15 @@ HTML <!DOCTYPE html>
   <title>Tools</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <?php
+  session_start();
+    if (!isset($_SESSION['email'])) {
+        header("Location: login.html");
+        exit();
+    }
+    ?>
+    
   <!-- navbar -->
   <nav class="navbar">
     <div class="logo_item">
@@ -34,6 +41,7 @@ HTML <!DOCTYPE html>
       <h1 style="text-align: center;">How are you feeling today?</h1>
       <div class="tools">
         <h2 style="text-align: left";>Mood Tracker</h2>
+        <form id="mood-form" action="submit_entry.php" method="post"> 
         <select id="week" name="week" class="date">
           <option value="Monday">Monday</option>
           <option value="Tuesday">Tuesday</option>
@@ -64,6 +72,7 @@ HTML <!DOCTYPE html>
   
           <button id="button1" class="button">Submit</button>
           <button id="button2" class="button">Delete</button>
+        </form>
         </div>
         <div>
           <table id="table" class="tables">
