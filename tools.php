@@ -29,8 +29,8 @@ HTML <!DOCTYPE html>
       <i class='bx bx-sun' id="darkLight"></i>
       <i class='bx bx-bell' ></i>
       <ul>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="signup.html">Sign Up</a></li>
+          <li><a href="logout.php">Login</a></li>
+          <li><a href="userprofile.php">Sign Up</a></li>
       </ul>
     </div>
   </nav>
@@ -142,8 +142,6 @@ HTML <!DOCTYPE html>
   </section>
 </section>
     
-    
-
   </main>
 
   <br> </br>
