@@ -21,7 +21,7 @@ HTML <!DOCTYPE html>
   <nav class="navbar">
     <div class="logo_item">
       <i class="bx bx-menu" id="sidebarOpen"></i>
-      <img src="icon.jpg" alt=""></i>Track2Day
+      <img src="track2daylogo.jpg" alt=""></i>
       <a href="menu2.php">Track2Day</a>
     </div>
     <div class="navbar_content">
@@ -29,8 +29,8 @@ HTML <!DOCTYPE html>
       <i class='bx bx-sun' id="darkLight"></i>
       <i class='bx bx-bell' ></i>
       <ul>
-          <li><a href="logout.php">Login</a></li>
-          <li><a href="userprofile.php">Sign Up</a></li>
+          <li><a href="logout.php">Logout</a></li>
+          <li><a href="userprofile.php">Profile</a></li>
       </ul>
     </div>
   </nav>

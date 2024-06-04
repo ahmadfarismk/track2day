@@ -77,7 +77,7 @@ mysqli_close($dbconn);
     <nav class="navbar">
         <div class="logo_item">
             <i class="bx bx-menu" id="sidebarOpen"></i>
-            <img src="icon.jpg" alt="Track2Day Logo">
+            <img src="track2daylogo.jpg" alt="Track2Day Logo">
             <a href="menu2.php">Track2Day</a>
         </div>
         <div class="navbar_content">
