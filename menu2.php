@@ -91,7 +91,7 @@ if ($result && mysqli_num_rows($result) > 0) {
             <div class="box">
               <h2>Tools</h2>
               <p>Access various tools including daily mood tracking, breathing exercises and journaling to enhance your well-being. Click the button below to use the tools.</p>
-              <button onclick="location.href='tools.html'">Use Tools</button>
+              <button onclick="location.href='tools.php'">Use Tools</button>
             </div>
           </div>
 

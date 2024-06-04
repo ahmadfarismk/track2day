@@ -102,43 +102,45 @@ HTML <!DOCTYPE html>
 
     <br> </br>
     
-
+    
     <section class="journal">
-    <header><h1 style="text-align: center;">My Personal Journal</h1></header>
-    <section class="section journal-section">
+      <header><h1 style="text-align: center;">My Personal Journal</h1></header>
+      <section class="section journal-section">
         <div class="container">
           <div class="container-row container-row-journal">
             <div class="container-item container-item-journal">
               <form id="entryForm" action="">
+                <label for="journal-id" class="journal-label">Journal ID:</label>
+                <input type="text" id="journal-id" name="journal_id" required><br>
                 <label for="entry-title" class="journal-label">Entry Title</label>
                 <input
-                  type="text"
-                  name="entry-title"
-                  id="entry-title"
-                  class="entry-text-title"
-                  placeholder="Name of entry"
+                type="text"
+                name="entry-title"
+                id="entry-title"
+                class="entry-text-title"
+                placeholder="Name of entry"
                 />
-                <label for="entry" class="journal-label">Today's Entry</label>
-                <textarea
-                  name="daily-entry"
-                  id="entry"
-                  class="entry-text-box"
-                  placeholder="What's on your mind today? 💭"
-                ></textarea>
-                <button class="btn-main entry-submit-btn" type="submit">Submit</button>
-              </form>
-            </div>
-          </div>
+            <label for="entry" class="journal-label">Today's Entry</label>
+            <textarea
+              name="daily-entry"
+              id="entry"
+              class="entry-text-box"
+              placeholder="What's on your mind today? 💭"
+            ></textarea>
+            <button class="btn-main entry-submit-btn" type="submit">Submit</button>
+          </form>
         </div>
-      </section>
-      <!-- Journal Entry Results -->
-      <section class="section sectionEntryResults" id="entryResultsSection">
-        <div class="container">
-          <div class="container-row entryResultRow"></div>
-        </div>
-        <script src="index.js"></script>
-      </section>
-    </section>
+      </div>
+    </div>
+  </section>
+  <!-- Journal Entry Results -->
+  <section class="section sectionEntryResults" id="entryResultsSection">
+    <div class="container">
+      <div class="container-row entryResultRow"></div>
+    </div>
+    <script src="index.js"></script>
+  </section>
+</section>
     
     
 
