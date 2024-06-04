@@ -22,7 +22,7 @@ HTML <!DOCTYPE html>
     <div class="logo_item">
       <i class="bx bx-menu" id="sidebarOpen"></i>
       <img src="icon.jpg" alt=""></i>Track2Day
-      <a href="menu.html">Track2Day</a>
+      <a href="menu2.php">Track2Day</a>
     </div>
     <div class="navbar_content">
       <i class='bi bi-grid'></i>
@@ -102,9 +102,9 @@ HTML <!DOCTYPE html>
 
     <br> </br>
     
-    
+   
     <section class="journal">
-      <header><h1 style="text-align: center;">My Personal Journal</h1></header>
+     <header><h1 style="text-align: center;">My Personal Journal</h1></header>
       <section class="section journal-section">
         <div class="container">
           <div class="container-row container-row-journal">

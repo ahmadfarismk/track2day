@@ -148,11 +148,18 @@ INSERT INTO `user` (`user_email`, `user_fname`, `user_lname`, `user_password`, `
 -- Table structure for table `user_mood`
 --
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_mood`
+--
+
 CREATE TABLE `user_mood` (
   `user_email` varchar(45) NOT NULL,
-  `mood_id` varchar(11) NOT NULL
+  `mood_id` varchar(11) NOT NULL,
+  FOREIGN KEY (user_email) REFERENCES user(user_email),
+  FOREIGN KEY (mood_id) REFERENCES mood(mood_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
 --
 -- Dumping data for table `user_mood`
 --
