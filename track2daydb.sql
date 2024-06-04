@@ -85,12 +85,12 @@ CREATE TABLE `mood` (
 --
 
 INSERT INTO `mood` (`mood_id`, `mood_score`, `mood_desc`) VALUES
-('M001', 6, 'Relaxed, Content'),
-('M002', 5, 'Energetic,Motivated'),
-('M003', 4, 'Average, Uneventful'),
-('M004', 3, 'Sick, Tired, Dull, Unmotivated'),
-('M005', 2, 'Sad, Lonely, Numb'),
-('M006', 1, 'Frustrated, Anxious, Grumpy');
+('M001', 1, 'Relaxed, Content'),
+('M002', 2, 'Energetic,Motivated'),
+('M003', 3, 'Average, Uneventful'),
+('M004', 4, 'Sick, Tired, Dull, Unmotivated'),
+('M005', 5, 'Sad, Lonely, Numb'),
+('M006', 6, 'Frustrated, Anxious, Grumpy');
 -- --------------------------------------------------------
 
 --
@@ -155,6 +155,7 @@ INSERT INTO `user` (`user_email`, `user_fname`, `user_lname`, `user_password`, `
 --
 
 CREATE TABLE `user_mood` (
+  'week' varchar(20) NOT NULL,
   `user_email` varchar(45) NOT NULL,
   `mood_id` varchar(11) NOT NULL,
   FOREIGN KEY (user_email) REFERENCES user(user_email),
@@ -165,11 +166,11 @@ CREATE TABLE `user_mood` (
 --
 
 INSERT INTO `user_mood` (`user_email`, `mood_id`) VALUES
-('carlos@gmail.com', 'M002'),
-('charles@gmail.com', 'M005'),
-('lando@gmail.com', 'M003'),
-('lando@gmail.com', 'M004'),
-('lewis@gmail.com', 'M001');
+('Monday','carlos@gmail.com', 'M002'),
+('Tuesday','charles@gmail.com', 'M005'),
+('Wednesday','lando@gmail.com', 'M003'),
+('Thursday','lando@gmail.com', 'M004'),
+('Saturday','lewis@gmail.com', 'M001');
 
 --
 -- Indexes for dumped tables

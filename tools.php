@@ -85,21 +85,21 @@ HTML <!DOCTYPE html>
         </tr>
       </thead>
       <tbody>
-        <?php
-        include('dbconn.php');
-        $user_email = $_SESSION['email'];
-        $sql_tools = "SELECT j.journal_date, m.mood_desc FROM journal j JOIN user_mood um ON j.user_email = um.user_email JOIN mood m ON um.mood_id = m.mood_id WHERE j.user_email = '$user_email'";
-        $result_tools = mysqli_query($dbconn, $sql_tools);
-
-        if ($result_tools) {
-          while ($row_task = mysqli_fetch_assoc($result_tools)) {
-            echo "<tr>";
-            echo "<td>". $row_task['journal_date']. "</td>";
-            echo "<td>". $row_task['mood_desc']. "</td>";
-            echo "</tr>";
-          }
+      <?php
+      include('dbconn.php');
+      $user_email = $_SESSION['email'];
+      $sql_tools = "SELECT um.week, m.mood_desc FROM user_mood um JOIN mood m ON um.mood_id = m.mood_id WHERE um.user_email = '$user_email'";
+      $result_tools = mysqli_query($dbconn, $sql_tools);
+      
+      if ($result_tools) {
+        while ($row_task = mysqli_fetch_assoc($result_tools)) {
+          echo "<tr>";
+          echo "<td>". $row_task['week']. "</td>";
+          echo "<td>". $row_task['mood_desc']. "</td>";
+          echo "</tr>";
         }
-       ?>
+      }
+      ?>
       </tbody>
     </table>
   </div>
