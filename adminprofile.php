@@ -46,6 +46,7 @@ mysqli_close($dbconn);
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <title>Track2Day</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <!-- navbar -->
@@ -61,7 +62,7 @@ mysqli_close($dbconn);
             <i class='bx bx-bell'></i>
             <ul>
                 <li><a href="logout.php">Logout</a></li>
-                <li><a href="userprofile.php">Profile</a></li>
+                <li><a href="adminprofile.php">Profile</a></li>
             </ul>
         </div>
     </nav>
@@ -106,10 +107,7 @@ mysqli_close($dbconn);
                         <td><?php echo htmlspecialchars($user_row['user_lname']); ?></td>
                         <td><?php echo htmlspecialchars($user_row['user_password']); ?></td>
                         <td>
-                            <form action="delete_user.php" method="POST" onsubmit="return confirm('Are you sure you want to delete this user?');">
-                                <input type="hidden" name="user_email" value="<?php echo htmlspecialchars($user_row['user_email']); ?>">
-                                <button type="submit">Delete</button>
-                            </form>
+                        <button onclick="deleteUser('user-<?php echo htmlspecialchars($user_row['user_email']); ?>')">Delete</button>
                         </td>
                     </tr>
                     <?php } ?>
@@ -142,6 +140,16 @@ mysqli_close($dbconn);
             </table>
         </div>
     </main>
+    <script> //otw
+        function deleteUser(rowId) {
+            if (confirm('Are you sure you want to delete this user?')) {
+                //delete particular user info
+                document.getElementById(rowId).style.display = 'none';
+            }
+        }
+    </script>
+    
+    </body>
 
     <footer>
         <div class="footer-container">
@@ -164,5 +172,4 @@ mysqli_close($dbconn);
             <p>&copy; 2023 Track2Day. All rights reserved</p>
         </div>
     </footer>
-</body>
 </html>
