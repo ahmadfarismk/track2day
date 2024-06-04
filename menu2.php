@@ -43,7 +43,7 @@ if ($result && mysqli_num_rows($result) > 0) {
     <nav class="navbar">
       <div class="logo_item">
         <i class="bx bx-menu" id="sidebarOpen"></i>
-        <img src="icon.jpg" alt=""></i>
+        <img src="track2daylogo.jpg" alt=""></i>
         <a href="menu2.php">Track2Day</a>
 
       </div>
