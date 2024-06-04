@@ -50,8 +50,8 @@ if ($result && mysqli_num_rows($result) > 0) {
         <i class='bx bx-sun' id="darkLight"></i>
         <i class='bx bx-bell' ></i>
         <ul>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="logout.php">Logout</a></li>
+            <li><a href="userprofile.php">Profile</a></li>
         </ul>
       </div>
   
@@ -154,8 +154,8 @@ if ($result && mysqli_num_rows($result) > 0) {
         <div class="footer-content">
             <h3>Quick Links</h3>
              <ul class="list">
-                <li><a href="menu.html">Home</a></li>
-                <li><a href="aboutus.html">About</a></li>
+                <li><a href="menu2.php">Home</a></li>
+                <li><a href="aboutus2.php">About</a></li>
                 <li><a href="login.html">Log In</a></li>
              </ul>
         </div>
