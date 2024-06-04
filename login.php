@@ -23,7 +23,7 @@ if ($user_type == 'admin') {
     $field2 = "adm_fname";
     $field3 = "adm_lname";
     $field4 = "adm_password";
-    $location = "adminprofile.html";
+    $location = "admin_profile_view.php";
 } else {
     $table = "user";
     $field1 = "user_email";

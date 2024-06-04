@@ -85,13 +85,13 @@ if ($result && mysqli_num_rows($result) > 0) {
             </div> -->
             <div class="box">
               <h2>Tasks</h2>
-              <p></p>
-              <button onclick="location.href='tasks.php'">Tasks</button>
+              <p>Organize your daily tasks, set deadlines and manage your to-do list efficiently. Click the button below to manage your tasks.</p>
+              <button onclick="location.href='tasks.php'">Manage Tasks</button>
             </div>
             <div class="box">
               <h2>Tools</h2>
-              <p>Log on your daily mood, breathing exercise and write your journal today!</p>
-              <button onclick="location.href='tools.html'">tools</button>
+              <p>Access various tools including daily mood tracking, breathing exercises and journaling to enhance your well-being. Click the button below to use the tools.</p>
+              <button onclick="location.href='tools.html'">Use Tools</button>
             </div>
           </div>
 
@@ -99,7 +99,6 @@ if ($result && mysqli_num_rows($result) > 0) {
           <h2 id="title-review">Reviews</h2>
           <div class="container-2">
             <div class="oval">
-              
             </div>
             <div class="oval">
               

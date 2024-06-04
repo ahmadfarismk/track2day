@@ -85,6 +85,8 @@ body.dark {
     
     
 } */
+
+/*menu.html*/
 #title{
     text-align: center;
     margin-top: 100px;
@@ -101,10 +103,10 @@ body.dark {
 }
 .container {
     background-color: #ffffff;
-    padding: 15px 28px;
+    padding: 20px 35px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    width: 350px;
     text-align: center;
     margin: auto;
     font-weight: normal;
@@ -120,8 +122,8 @@ body.dark {
 .box{
     background-color: #ffffff;
     border-radius: 10px;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
     font-size: medium;
@@ -137,7 +139,7 @@ body.dark {
     font-size: medium;
 }
 button {
-    padding: 1px 2px;
+    padding: 10px 2px;
     border: unset;
     border-radius: 15px;
     color: #212121;
@@ -719,36 +721,34 @@ button:hover {
 
 .logout-actions {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 20px;
 }
 
 .logout-actions button {
-  flex: 1;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
+  background-color: #4070f4;
+  color: #fff;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin: 5px;
-  color: #fff;
 }
 
-.logout-actions button[name="logout"] {
-  background-color: #28a745;
+.logout-actions button:hover {
+  background-color: #3050d4;
 }
 
-.logout-actions button[name="logout"]:hover {
-  background-color: #218838;
+.logout-actions button:last-child {
+  background-color: #ddd;
+  color: #333;
 }
 
-.logout-actions button.cancel {
-  background-color: #dc3545;
-}
-
-.logout-actions button.cancel:hover {
-  background-color: #c82333;
+.logout-actions button:last-child:hover {
+  background-color: #ddd;
+  color: #ddd;
 }
 
 /*tasks.html*/

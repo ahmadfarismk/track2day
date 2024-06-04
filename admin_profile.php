@@ -1,32 +1,44 @@
 <?php
-// Database connection setup
+// Start the session
+session_start();
+
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "track2daydb";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Create connection
+$dbconn = new mysqli($servername, $username, $password, $dbname);
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+// Check connection
+if ($dbconn->connect_error) {
+    die("Connection failed: " . $dbconn->connect_error);
 }
 
-// Fetch admin details
-$admin_email = 'auni@gmail.com'; // Example email, dynamically fetch based on logged-in admin
+// Check if the admin is logged in
+if (!isset($_SESSION['adm_email'])) {
+    // If not logged in, redirect to login page
+    header("Location: login.html");
+    exit(); // Stop further execution
+}
+
+// Fetch admin details based on session variable
+$admin_email = $_SESSION['adm_email']; // Example email, dynamically fetch based on logged-in admin
 $admin_sql = "SELECT * FROM admin WHERE adm_email='$admin_email'";
-$admin_result = $conn->query($admin_sql);
+$admin_result = $dbconn->query($admin_sql);
 $admin = $admin_result->fetch_assoc();
 
-// Fetch users
-$user_sql = "SELECT * FROM user";
-$user_result = $conn->query($user_sql);
+// Fetch users associated with this admin
+$user_sql = "SELECT * FROM user WHERE adm_email='" . $admin['adm_email'] . "'";
+$user_result = $dbconn->query($user_sql);
 
 // Fetch therapists (assuming therapists are in the user table and have a specific role)
-$therapist_sql = "SELECT * FROM user WHERE user_email IN (SELECT user_email FROM user_mood WHERE mood_id = 'M005')"; // Example condition
-$therapist_result = $conn->query($therapist_sql);
+$therapist_sql = "SELECT * FROM admin"; // This query might need to be adjusted based on your database structure
+$therapist_result = $dbconn->query($therapist_sql);
 
-$conn->close();
+// Close the database connection
+$dbconn->close();
 
-// Pass data to the view
+// Include the view file to display the admin profile
 include 'admin_profile_view.php';
 ?>

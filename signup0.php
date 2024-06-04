@@ -33,5 +33,7 @@ session_start();
 	 echo "<br>Last Name : " .$user_lname;
 	 echo "<br>Email : " .$user_email;
 	 echo "<br>Password : " .$user_password;
-	echo"<br><a href='viewData.php'>Main page</a>";
+	echo"<br><a href='menu.html'>Main page</a>";
+	#echo"<br><a href='register.html'>register</a><br>";
+	#echo"<a href='login.html'>login</a>";
 ?>
