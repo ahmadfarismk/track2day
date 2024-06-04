@@ -38,55 +38,72 @@ HTML <!DOCTYPE html>
   <main>
     <br>
     <section id="mood-tracker">
-      <h1 style="text-align: center;">How are you feeling today?</h1>
-      <div class="tools">
-        <h2 style="text-align: left";>Mood Tracker</h2>
-        <form id="mood-form" action="submit_entry.php" method="post"> 
-        <select id="week" name="week" class="date">
-          <option value="Monday">Monday</option>
-          <option value="Tuesday">Tuesday</option>
-          <option value="Wednesday">Wednesday</option>
-          <option value="Thursday">Thursday</option>
-          <option value="Friday">Friday</option>
-          <option value="Saturday">Saturday</option>
-          <option value="Sunday">Sunday</option>
-        </select><br>
-        <div class="mood">
-          <input type="radio" id="mood1" name="mood" value="Joyful, Happy, Relaxed, Silly, Content, Great">
-          <label for="mood1"> Relaxed, Content</label><br>
-          
-          <input type="radio" id="mood2" name="mood" value="Productive, Active, Energetic, Motivated">
-          <label for="mood2">Energetic, Motivated</label><br>
+  <h1 style="text-align: center;">How are you feeling today?</h1>
+  <div class="tools">
+    <h2 style="text-align: left;">Mood Tracker</h2>
+    <form id="mood-form" action="submit_entry.php" method="POST"> 
+      <select id="week" name="week" class="date">
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+        <option value="Sunday">Sunday</option>
+      </select><br>
+
+      <div class="mood">
+        <input type="radio" id="mood1" name="mood" value="M001">
+        <label for="mood1"> Relaxed, Content</label><br>
+        
+        <input type="radio" id="mood2" name="mood" value="M002">
+        <label for="mood2">Energetic, Motivated</label><br>
   
-          <input type="radio" id="mood3" name="mood" value="Average, Normal, Uneventful, Good">
-          <label for="mood3">Average, Uneventful</label><br>
+        <input type="radio" id="mood3" name="mood" value="M003">
+        <label for="mood3">Average, Uneventful</label><br>
   
-          <input type="radio" id="mood4" name="mood" value="Sick, Tired, Lazy, Dull, Unmotivated, Bored">
-          <label for="mood4">Sick, Tired, Dull, Unmotivated</label><br>
+        <input type="radio" id="mood4" name="mood" value="M004">
+        <label for="mood4">Sick, Tired, Dull, Unmotivated</label><br>
   
-          <input type="radio" id="mood5" name="mood" value="Sad, Lonely, Numb, Depressed, Insecure">
-          <label for="mood5">Sad, Lonely, Numb</label><br>
+        <input type="radio" id="mood5" name="mood" value="M005">
+        <label for="mood5">Sad, Lonely, Numb</label><br>
   
-          <input type="radio" id="mood6" name="mood" value="Angry, Frustrated, Anxious, Grumpy">
-          <label for="mood6">Frustrated, Anxious, Grumpy</label><br><br>
+        <input type="radio" id="mood6" name="mood" value="M006">
+        <label for="mood6">Frustrated, Anxious, Grumpy</label><br><br>
   
-          <button id="button1" class="button">Submit</button>
-          <button id="button2" class="button">Delete</button>
-        </form>
-        </div>
-        <div>
-          <table id="table" class="tables">
-            <thead>
-              <tr>
-                <td class="white">Weekday</td>
-                <td class="white">Mood</td>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
+        <button id="button1" class="button">Submit</button>
+        <button id="button2" class="button">Delete</button>
       </div>
-    </section>
+    </form>
+  </div>
+  <div>
+    <table id="table" class="tables">
+      <thead>
+        <tr>
+          <td class="white">Weekday</td>
+          <td class="white">Mood</td>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+        include('dbconn.php');
+        $user_email = $_SESSION['email'];
+        $sql_tools = "SELECT j.journal_date, m.mood_desc FROM journal j JOIN user_mood um ON j.user_email = um.user_email JOIN mood m ON um.mood_id = m.mood_id WHERE j.user_email = '$user_email'";
+        $result_tools = mysqli_query($dbconn, $sql_tools);
+
+        if ($result_tools) {
+          while ($row_task = mysqli_fetch_assoc($result_tools)) {
+            echo "<tr>";
+            echo "<td>". $row_task['journal_date']. "</td>";
+            echo "<td>". $row_task['mood_desc']. "</td>";
+            echo "</tr>";
+          }
+        }
+       ?>
+      </tbody>
+    </table>
+  </div>
+</section>
 
     <br>
 
