@@ -79,12 +79,12 @@ mysqli_close($dbconn);
             </div>
 
             <div class="profile-actions">
-                <button onclick="location.href='editprofile.html'">Edit Profile</button>
-                <button onclick="location.href='changepassword.html'">Change Password</button>
+                <button onclick="location.href='admineditprofile.php'">Edit Profile</button>
+                <button onclick="location.href='adminchangepassword.php'">Change Password</button>
             </div>
         </div>
     
-        <!-- Container for Users Data Table -->
+        <!-- Users Data Table -->
         <div class="data-table-container">
             <h2>Users</h2>
             <table id="user-table">
@@ -116,7 +116,7 @@ mysqli_close($dbconn);
             </table>
         </div>
         
-        <!-- Container for Therapists Data Table -->
+        <!-- Therapist data table -->
         <div class="data-table-container">
             <h2>Therapists</h2>
             <table id="therapist-table">
