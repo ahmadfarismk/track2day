@@ -56,22 +56,22 @@ HTML <!DOCTYPE html>
 
       <div class="mood">
         <input type="radio" id="mood1" name="mood" value="M001">
-        <label for="mood1">Relaxed, Content</label><br>
+        <label for="mood1">MOO1: Relaxed, Content</label><br>
         
         <input type="radio" id="mood2" name="mood" value="M002">
-        <label for="mood2">Energetic, Motivated</label><br>
+        <label for="mood2">MOO2: Energetic, Motivated</label><br>
   
         <input type="radio" id="mood3" name="mood" value="M003">
-        <label for="mood3">Average, Uneventful</label><br>
+        <label for="mood3">MOO3: Average, Uneventful</label><br>
   
         <input type="radio" id="mood4" name="mood" value="M004">
-        <label for="mood4">Sick, Tired, Dull, Unmotivated</label><br>
+        <label for="mood4">MOO4: Sick, Tired, Dull, Unmotivated</label><br>
   
         <input type="radio" id="mood5" name="mood" value="M005">
-        <label for="mood5">Sad, Lonely, Numb</label><br>
+        <label for="mood5">MOO5: Sad, Lonely, Numb</label><br>
   
         <input type="radio" id="mood6" name="mood" value="M006">
-        <label for="mood6">Frustrated, Anxious, Grumpy</label><br><br>
+        <label for="mood6">MOO6: Frustrated, Anxious, Grumpy</label><br><br>
   
         <button id="button1" class="button">Submit</button>
         <button id="button2" class="button">Delete</button>
