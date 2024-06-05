@@ -49,6 +49,7 @@ function maskPassword($password) {
     <!-- Boxicons CSS -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <title>Track2Day</title>
+    <link rel="icon" type="image/x-icon" href="track2daylogo.jpg">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -79,7 +80,7 @@ function maskPassword($password) {
                 </div>
                 <div class="profile-details">
                     <p><strong>Name: </strong><?php echo htmlspecialchars($adm_fname) . ' ' . htmlspecialchars($adm_lname); ?></p>
-                    <p><strong>Email: </strong><?php echo htmlspecialchars($adm_email); ?></p>
+                    <p><strong> Email: </strong><?php echo htmlspecialchars($adm_email); ?></p>
                 </div>
             </div>
 
