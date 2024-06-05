@@ -101,7 +101,7 @@ if ($result && mysqli_num_rows($result) > 0) {
         <div class="therapist-container-2">
             <div class="therapist-box">
                 <h2>Dr. Faris</h2>
-                <img src="messi.jpg" class="center-align image">
+                <img src="faris.jpg" class="center-align image">
                 <br>
                 <img src="rating.jpg" class="center-align rating">
                 <img src="rating.jpg" class="center-align rating">

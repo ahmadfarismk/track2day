@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt->execute()) {
             echo "<script>
                 alert('The task has been added!');
-                window.history.back();
+                location.href = 'tasks.php';
             </script>";
         } else {
             echo "Error: " . $stmt->error;

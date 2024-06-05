@@ -110,11 +110,16 @@ if ($result && mysqli_num_rows($result) > 0) {
           <h2 id="title-review">Reviews</h2>
           <div class="container-2">
             <div class="oval">
+            <h4> Johnny Deed</h4>
+              <p>"Fantastic tool that has significantly improved my mood and productivity. The mood tracking and productivity features are easy to use and highly effective"</p>
             </div>
             <div class="oval">
-              
+              <h4>Mike Schmidt</h4>
+              <p>I've found Track2Day to be an essential part of my day. Its intuitive mood tracking and effective productivity features have made a noticeable difference in my focus and overall happiness. </p>
             </div>
             <div class="oval">
+            <h4> Johnny Deed</h4>
+              <p>"Fantastic tool that has significantly improved my mood and productivity. The mood tracking and productivity features are easy to use and highly effective"</p>
               
             </div>
           </div>

@@ -28,11 +28,10 @@ session_start();
 	 '" . $user_lname . "','" . $user_password . "', '" . $chosen_adm . "')";
 	 
 	 mysqli_query($dbconn, $sqlInsert) or die ("Error: " . mysqli_error($dbconn));
-	 echo "The following information have been recorded in the DB";
-	 echo "<br>First Name : " .$user_fname;
-	 echo "<br>Last Name : " .$user_lname;
-	 echo "<br>Email : " .$user_email;
-	 echo "<br>Password : " .$user_password;
+	 echo "<script>
+	 alert('The data has been added to stored!');
+	 </script>";
+
 	echo"<br><a href='menu2.php'>Main page</a>";
 	#echo"<br><a href='register.html'>register</a><br>";
 	#echo"<a href='login.html'>login</a>";
