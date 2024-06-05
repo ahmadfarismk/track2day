@@ -25,9 +25,10 @@
         <h1>Are you sure you want to log out?</h1>
         <div class="logout-actions">
             <form method="post">
-                <button type="submit" name="logout">Yes</button>
-            </form>
-            <button onclick="cancelLogout('<?php echo $user_type; ?>')">Cancel</button>
+                 <button type="submit" name="logout">Yes</button>
+                 
+                <button onclick="cancelLogout('<?php echo $user_type; ?>')">Cancel</button>
+                </form>
         </div>
     </div>
 
