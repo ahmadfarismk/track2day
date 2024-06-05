@@ -125,18 +125,27 @@ body.dark {
     width: 250px;
     height: 250px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    text-align: justify;
+    padding: 5px;
     font-size: medium;
+}
+h4{
+  font-size: 25px;
 }
 .oval{
     background-color: #ffffff;
-    border-radius: 40%;
+    border-radius: 20%;
     margin-bottom: 50px;
-    width: 250px;
+    width: 350px;
     height: 200px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
     font-size: medium;
+}
+.oval p{
+    text-align: justify;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 button {
     padding: 10px 2px;
@@ -185,7 +194,7 @@ button {
    {
      display: block;
      position: relative;
-     right: 700px;
+     right: 218px;
      z-index: 1;
      -webkit-user-select: none;
      user-select: none;
@@ -220,11 +229,11 @@ button {
    #menuToggle span
    {
      display: block;
-     width: 33px;
-     height: 4px;
+     width: 26px;
+     height: 3px;
      margin-bottom: 5px;
      position: relative;
-     background: #cdcdcd;
+     background: #113872;
      border-radius: 3px;
      z-index: 1;
      transform-origin: 4px 0px;
@@ -265,10 +274,11 @@ button {
    {
      position: absolute;
      width: 300px;
+     height: 800px;
      margin: -100px 0 0 -50px;
      padding: 50px;
      padding-top: 125px;
-     background: #ededed;
+     background: #ffffff;
      list-style-type: none;
      -webkit-font-smoothing: antialiased;
      /* to stop flickering of text in safari */
@@ -279,8 +289,10 @@ button {
    
    #menu li
    {
-     padding: 10px 0;
+     padding: 25px 0;
      font-size: 22px;
+     text-align: center;
+     
    }
    
    #menuToggle input:checked ~ ul
