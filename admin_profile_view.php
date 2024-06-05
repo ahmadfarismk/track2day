@@ -14,15 +14,15 @@
     <div class="logo_item">
       <i class="bx bx-menu" id="sidebarOpen"></i>
       <img src="icon.jpg" alt="">
-      <a href="menu.html">Track2Day</a>
+      <p>Track2Day</p>
     </div>
     <div class="navbar_content">
       <i class='bi bi-grid'></i>
       <i class='bx bx-sun' id="darkLight"></i>
       <i class='bx bx-bell'></i>
       <ul>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Sign Up</a></li>
+        <li><a href="logout.php">Login</a></li>
+        <li><a href="adminprofile.php">Sign Up</a></li>
       </ul>
     </div>
   </nav>
