@@ -29,10 +29,11 @@ session_start();
 	 
 	 mysqli_query($dbconn, $sqlInsert) or die ("Error: " . mysqli_error($dbconn));
 	 echo "<script>
-	 alert('The data has been added to stored!');
+	 alert('The data has been added to record!');
+	 location.href = 'login.html';
 	 </script>";
 
-	echo"<br><a href='menu2.php'>Main page</a>";
+
 	#echo"<br><a href='register.html'>register</a><br>";
 	#echo"<a href='login.html'>login</a>";
 ?>
