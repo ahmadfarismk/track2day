@@ -88,7 +88,7 @@ HTML <!DOCTYPE html>
       <?php
       include('dbconn.php');
       $user_email = $_SESSION['email'];
-      $sql_tools = "SELECT um.week, m.mood_desc FROM user_mood um JOIN mood m ON um.mood_id = m.mood_id WHERE um.user_email = '$user_email'";
+      $sql_tools = "SELECT um.week, m.mood_desc FROM user_mood um JOIN mood m ON um.mood_desc = m.mood_desc WHERE um.user_email = '$user_email'";
       $result_tools = mysqli_query($dbconn, $sql_tools);
       
       if ($result_tools) {
