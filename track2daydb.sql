@@ -31,7 +31,8 @@ CREATE TABLE `admin` (
   `adm_email` varchar(45) NOT NULL,
   `adm_fname` varchar(45) NOT NULL,
   `adm_lname` varchar(45) NOT NULL,
-  `adm_password` varchar(45) NOT NULL
+  `adm_password` varchar(45) NOT NULL,
+  PRIMARY KEY (`adm_email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -45,6 +46,33 @@ INSERT INTO `admin` (`adm_email`, `adm_fname`, `adm_lname`, `adm_password`) VALU
 ('zarith@gmail.com', 'Zarith', 'Adliena', 'admin123');
 
 -- --------------------------------------------------------
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `user_email` varchar(45) NOT NULL,
+  `user_fname` varchar(45) NOT NULL,
+  `user_lname` varchar(45) NOT NULL,
+  `user_password` varchar(45) NOT NULL,
+  `adm_email` varchar(45) NOT NULL,
+  PRIMARY KEY (`user_email`),
+  KEY `fk_admin_email` (`adm_email`),
+  CONSTRAINT `fk_admin_email` FOREIGN KEY (`adm_email`) REFERENCES `admin` (`adm_email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`user_email`, `user_fname`, `user_lname`, `user_password`, `adm_email`) VALUES
+('carlos@gmail.com', 'Carlos', 'Sainz', 'password123', 'auni@gmail.com'),
+('charles@gmail.com', 'Charles', 'Leclerc', 'password123', 'zarith@gmail.com'),
+('lando@gmail.com', 'Lando', 'Norris', 'password123', 'syakir@gmail.com'),
+('lewis@gmail.com', 'Lewis', 'Hamilton', 'password123', 'faris@gmail.com'),
+('max@gmail.com', 'Max', 'Verstappen', 'password123', 'syakir@gmail.com');
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `journal`
@@ -53,8 +81,11 @@ INSERT INTO `admin` (`adm_email`, `adm_fname`, `adm_lname`, `adm_password`) VALU
 CREATE TABLE `journal` (
   `journal_id` varchar(11) NOT NULL,
   `journal_title` varchar(45) NOT NULL,
-  `journal_date` varchar(45) NOT NULL,
-  `user_email` varchar(45) NOT NULL
+  `journal_date` date NOT NULL,
+  `user_email` varchar(45) NOT NULL,
+  PRIMARY KEY (`journal_id`),
+  KEY `fk_user_email_journal` (`user_email`),
+  CONSTRAINT `fk_user_email_journal` FOREIGN KEY (`user_email`) REFERENCES `user` (`user_email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -77,7 +108,8 @@ INSERT INTO `journal` (`journal_id`, `journal_title`, `journal_date`, `user_emai
 CREATE TABLE `mood` (
   `mood_id` varchar(11) NOT NULL,
   `mood_score` int(11) NOT NULL,
-  `mood_desc` varchar(45) NOT NULL
+  `mood_desc` varchar(45) NOT NULL,
+  PRIMARY KEY (`mood_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -86,11 +118,12 @@ CREATE TABLE `mood` (
 
 INSERT INTO `mood` (`mood_id`, `mood_score`, `mood_desc`) VALUES
 ('M001', 1, 'Relaxed, Content'),
-('M002', 2, 'Energetic,Motivated'),
+('M002', 2, 'Energetic, Motivated'),
 ('M003', 3, 'Average, Uneventful'),
 ('M004', 4, 'Sick, Tired, Dull, Unmotivated'),
 ('M005', 5, 'Sad, Lonely, Numb'),
 ('M006', 6, 'Frustrated, Anxious, Grumpy');
+
 -- --------------------------------------------------------
 
 --
@@ -103,7 +136,10 @@ CREATE TABLE `task` (
   `task_desc` varchar(45) NOT NULL,
   `task_duration` date DEFAULT NULL,
   `task_status` varchar(45) NOT NULL,
-  `user_email` varchar(45) NOT NULL
+  `user_email` varchar(45) NOT NULL,
+  PRIMARY KEY (`task_id`),
+  KEY `fk_user_email_task` (`user_email`),
+  CONSTRAINT `fk_user_email_task` FOREIGN KEY (`user_email`) REFERENCES `user` (`user_email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -119,30 +155,6 @@ INSERT INTO `task` (`task_id`, `task_name`, `task_desc`, `task_duration`, `task_
 
 -- --------------------------------------------------------
 
---
--- Table structure for table `user`
---
-
-CREATE TABLE `user` (
-  `user_email` varchar(45) NOT NULL,
-  `user_fname` varchar(45) NOT NULL,
-  `user_lname` varchar(45) NOT NULL,
-  `user_password` varchar(45) NOT NULL,
-  `adm_email` varchar(45) NOT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`user_email`, `user_fname`, `user_lname`, `user_password`, `adm_email`) VALUES
-('carlos@gmail.com', 'Carlos', 'Sainz', 'password123', 'auni@gmail.com'),
-('charles@gmail.com', 'Charles', 'Leclerc', 'password123', 'zarith@gmail.com'),
-('lando@gmail.com', 'Lando', 'Norris', 'password123', 'syakir@gmail.com'),
-('lewis@gmail.com', 'Lewis', 'Hamilton', 'password123', 'faris@gmail.com'),
-('max@gmail.com', 'Max', 'Verstappen', 'password123', 'syakir@gmail.com');
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `user_mood`
@@ -158,11 +170,11 @@ CREATE TABLE `user_mood` (
   `week` varchar(20) NOT NULL,
   `user_email` varchar(45) NOT NULL,
   `mood_id` varchar(11) NOT NULL,
-  PRIMARY KEY (`week`,`user_email`,`mood_id`),
+  PRIMARY KEY (`week`, `user_email`, `mood_id`),
   KEY `fk_mood_id_user_mood` (`mood_id`),
   KEY `fk_user_email_user_mood` (`user_email`),
-  FOREIGN KEY (mood_id) REFERENCES mood(mood_id),
-  FOREIGN KEY (user_email) REFERENCES user(user_email)
+  CONSTRAINT `fk_mood_id_user_mood` FOREIGN KEY (`mood_id`) REFERENCES `mood` (`mood_id`),
+  CONSTRAINT `fk_user_email_user_mood` FOREIGN KEY (`user_email`) REFERENCES `user` (`user_email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -218,8 +230,9 @@ ALTER TABLE `user`
 -- Indexes for table `user_mood`
 --
 ALTER TABLE `user_mood`
-  ADD PRIMARY KEY (`user_email`,`mood_id`),
-  ADD KEY `fk_mood_id_user_mood` (`mood_id`);
+  ADD PRIMARY KEY (`week`, `user_email`, `mood_id`),
+  ADD KEY `fk_mood_id_user_mood` (`mood_id`),
+  ADD KEY `fk_user_email_user_mood` (`user_email`);
 
 --
 -- Constraints for dumped tables
@@ -249,8 +262,8 @@ ALTER TABLE `user`
 ALTER TABLE `user_mood`
   ADD CONSTRAINT `fk_mood_id_user_mood` FOREIGN KEY (`mood_id`) REFERENCES `mood` (`mood_id`),
   ADD CONSTRAINT `fk_user_email_user_mood` FOREIGN KEY (`user_email`) REFERENCES `user` (`user_email`);
-COMMIT;
 
+COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

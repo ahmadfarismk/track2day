@@ -6,6 +6,7 @@
     <!-- Boxicons CSS -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <title>Track2Day</title>
+    <link rel="icon" type="image/x-icon" href="track2daylogo.jpg">
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>

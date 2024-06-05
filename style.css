@@ -530,7 +530,8 @@ button:hover {
 .profile-details {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  text-align: left;
+  margin-bottom: 10px;
 }
 
 .profile-pic {
