@@ -21,19 +21,9 @@ HTML <!DOCTYPE html>
   <!-- navbar -->
   <nav class="navbar">
     <div class="logo_item">
+      <i class="bx bx-menu" id="sidebarOpen"></i>
       <img src="track2daylogo.jpg" alt=""></i>
       <a href="menu2.php">Track2Day</a>
-      <div id="menuToggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-            <ul id="menu">
-              <a href="menu2.php"><li>Home</li></a>
-              <a href="aboutus.html"><li>About</li></a>
-              <a href="userprofile.php"><li>Profile</li></a>
-            </ul>
-          </div>
     </div>
     <div class="navbar_content">
       <i class='bi bi-grid'></i>
@@ -54,7 +44,7 @@ HTML <!DOCTYPE html>
     <h2 style="text-align: left;">Mood Tracker</h2>
     <form id="mood-form" action="submit_entry.php" method="POST"> 
     <input type="hidden" name="user_email" value="<?php echo $_SESSION['email']; ?>">
-      <select id="week" name="week" class="date">
+     <select id="week" name="week" class="date">
         <option value="Monday">Monday</option>
         <option value="Tuesday">Tuesday</option>
         <option value="Wednesday">Wednesday</option>
@@ -132,46 +122,46 @@ HTML <!DOCTYPE html>
     <br> </br>
     
    
-    <section class="journal">
-     <header><h1 style="text-align: center;">My Personal Journal</h1></header>
-      <section class="section journal-section">
-        <div class="container">
-          <div class="container-row container-row-journal">
-            <div class="container-item container-item-journal">
-              <form id="entryForm" action="">
-                <label for="journal-id" class="journal-label">Journal ID:</label>
-                <input type="text" id="journal-id" name="journal_id" required><br>
-                <label for="entry-title" class="journal-label">Entry Title</label>
-                <input
-                type="text"
-                name="entry-title"
-                id="entry-title"
-                class="entry-text-title"
-                placeholder="Name of entry"
-                />
-            <label for="entry" class="journal-label">Today's Entry</label>
-            <textarea
-              name="daily-entry"
-              id="entry"
-              class="entry-text-box"
-              placeholder="What's on your mind today? 💭"
-            ></textarea>
-            <button class="btn-main entry-submit-btn" type="submit">Submit</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Journal Entry Results -->
-  <section class="section sectionEntryResults" id="entryResultsSection">
-    <div class="container">
-      <div class="container-row entryResultRow"></div>
-    </div>
-    <script src="index.js"></script>
-  </section>
+    <section class="journal"> 
+     <header><h1 style="text-align: center;">My Personal Journal</h1></header> 
+      <section class="section journal-section"> 
+        <div class="container"> 
+          <div class="container-row container-row-journal"> 
+            <div class="container-item container-item-journal"> 
+              <form id="entryForm" action=""> 
+                <label for="journal-id" class="journal-label">Journal ID:</label> 
+                <input type="text" id="journal-id" name="journal_id" required><br> 
+                <label for="entry-title" class="journal-label">Entry Title</label> 
+                <input 
+                type="text" 
+                name="entry-title" 
+                id="entry-title" 
+                class="entry-text-title" 
+                placeholder="Name of entry" 
+                /> 
+            <label for="entry" class="journal-label">Today's Entry</label> 
+            <textarea 
+              name="daily-entry" 
+              id="entry" 
+              class="entry-text-box" 
+              placeholder="What's on your mind today? 💭" 
+            ></textarea> 
+            <button class="btn-main entry-submit-btn" type="submit">Submit</button> 
+          </form> 
+        </div> 
+      </div> 
+    </div> 
+  </section> 
+  <!-- Journal Entry Results --> 
+  <section class="section sectionEntryResults" id="entryResultsSection"> 
+    <div class="container"> 
+      <div class="container-row entryResultRow"></div> 
+    </div> 
+    <script src="index.js"></script> 
+  </section> 
 </section>
-    
-  </main>
+  
+</main>
 
   <br> </br>
 
