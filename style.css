@@ -345,18 +345,11 @@ h3{
 .list li:hover::before{
     width: 70px;
 }
-.github-link {
-  display: inline-block;
-  padding: 10px;
-  background-color: hsla(216, 50%, 27%, 0.861); /* Background color for the GitHub icon */
-  border-radius: 50%; /* Makes the background circular */
-}
+
 .github-img {
   width: 30px;
   height: 30px;
-  display: block;
-  margin: auto;
-
+  margin: 10px;
 }
 .social-icons{
     text-align: center;
@@ -373,12 +366,9 @@ h3{
 }
 footer a{
     text-decoration: none;
-    background-color: #e7f2fd;
     border-radius: 10px;
     padding: 2px;
-}
-footer a img{
-  margin: ;
+    color:#cdcdcd ;
 }
 a:hover{
     color: #f18930;
