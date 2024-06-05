@@ -230,8 +230,9 @@ ALTER TABLE `user`
 -- Indexes for table `user_mood`
 --
 ALTER TABLE `user_mood`
-  ADD PRIMARY KEY (`user_email`,`mood_id`),
-  ADD KEY `fk_mood_id_user_mood` (`mood_id`);
+  ADD PRIMARY KEY (`week`, `user_email`, `mood_id`),
+  ADD KEY `fk_mood_id_user_mood` (`mood_id`),
+  ADD KEY `fk_user_email_user_mood` (`user_email`);
 
 --
 -- Constraints for dumped tables
@@ -261,8 +262,8 @@ ALTER TABLE `user`
 ALTER TABLE `user_mood`
   ADD CONSTRAINT `fk_mood_id_user_mood` FOREIGN KEY (`mood_id`) REFERENCES `mood` (`mood_id`),
   ADD CONSTRAINT `fk_user_email_user_mood` FOREIGN KEY (`user_email`) REFERENCES `user` (`user_email`);
-COMMIT;
 
+COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
