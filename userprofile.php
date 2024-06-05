@@ -169,7 +169,10 @@ mysqli_close($dbconn);
              <ul class="list">
                 <li><a href="menu2.php">Home</a></li>
                 <li><a href="aboutus2.php">About</a></li>
-                <li><a href="login.html">Log In</a></li>
+                </li>
+                <a href="https://github.com/ahmadfarismk/track2day.git" class="github-link">
+                    <img src="github.png" alt="GitHub" class="github-img" >
+                </a>
              </ul>
         </div>
         

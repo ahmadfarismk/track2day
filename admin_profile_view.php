@@ -103,27 +103,5 @@
     </section>
   </main>
 
-  <footer>
-    <div class="footer-container">
-        <div class="footer-content">
-            <h3>Contact Us</h3>
-            <p>Email: track2day@enquiries.com</p>
-            <p>Phone:+ 03-84532900</p>
-            <p>Address: 56 Jln 14/48 Seksyen 14 Petaling Jaya</p>
-        </div>
-        <div class="footer-content">
-            <h3>Quick Links</h3>
-             <ul class="list">
-                <li><a href="menu.html">Home</a></li>
-                <li><a href="aboutus.html">About</a></li>
-                <li><a href="login.html">Log In</a></li>
-             </ul>
-        </div>
-        
-    </div>
-    <div class="bottom-bar">
-        <p>&copy; 2023 Track2Day . All rights reserved</p>
-    </div>
-  </footer>
 </body>
 </html>
