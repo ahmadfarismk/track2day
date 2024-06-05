@@ -33,7 +33,8 @@ if ($result && mysqli_num_rows($result) > 0) {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Boxicons CSS -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <title>Side Navigation Bar in HTML CSS JavaScript</title>
+    <title>Track2day</title>
+    <link rel="icon" type="image/x-icon" href="track2daylogo.jpg">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
