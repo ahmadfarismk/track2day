@@ -57,7 +57,7 @@ function maskPassword($password) {
         <div class="logo_item">
             <i class="bx bx-menu" id="sidebarOpen"></i>
             <img src="track2daylogo.jpg" alt="Track2Day Logo">
-            <a href="menu2.php">Track2Day</a>
+            <p>Track2Day</p>
         </div>
         <div class="navbar_content">
             <i class='bi bi-grid'></i>

@@ -26,7 +26,6 @@
         <div class="logout-actions">
             <form method="post">
                  <button type="submit" name="logout">Yes</button>
-                 
                 <button onclick="cancelLogout('<?php echo $user_type; ?>')">Cancel</button>
                 </form>
         </div>

@@ -304,6 +304,7 @@ button {
 .footer-content{
     width: 33.3%;
 }
+
 h3{
     font-size: 28px;
     margin-bottom: 15px;
@@ -344,6 +345,11 @@ h3{
 .list li:hover::before{
     width: 70px;
 }
+.list img {
+  width: 55px;
+  height: 55px;
+  border-radius: 75%;
+}
 .social-icons{
     text-align: center;
     padding: 0;
@@ -365,6 +371,7 @@ footer a{
 
     
 }
+
 a:hover{
     color: #f18930;
 }
@@ -383,6 +390,7 @@ a:hover{
     font-size: 16px;
     padding: 7px;
 }
+
 
 /* login.html */
 .login-container {
