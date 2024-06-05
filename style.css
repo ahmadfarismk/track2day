@@ -54,6 +54,7 @@ body.dark {
   width: 55px;
   height: 55px;
   border-radius: 75%;
+  margin-left: 20px;
 }
 
 .navbar_content {
@@ -229,6 +230,7 @@ button {
    #menuToggle span
    {
      display: block;
+     right: 10px;
      width: 26px;
      height: 3px;
      margin-bottom: 5px;

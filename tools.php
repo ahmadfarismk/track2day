@@ -21,9 +21,19 @@ HTML <!DOCTYPE html>
   <!-- navbar -->
   <nav class="navbar">
     <div class="logo_item">
-      <i class="bx bx-menu" id="sidebarOpen"></i>
       <img src="track2daylogo.jpg" alt=""></i>
       <a href="menu2.php">Track2Day</a>
+      <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+              <a href="menu2.php"><li>Home</li></a>
+              <a href="aboutus.html"><li>About</li></a>
+              <a href="userprofile.php"><li>Profile</li></a>
+            </ul>
+          </div>
     </div>
     <div class="navbar_content">
       <i class='bi bi-grid'></i>
