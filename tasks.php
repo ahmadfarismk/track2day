@@ -81,24 +81,12 @@ if (!isset($_SESSION['email'])) {
                         ?>
                     </tbody>
                 </table>
-                <button type="button" id="add-task">Add Task</button>
-                <button type="submit" name="save">Save Changes</button>
+                <button type="button" onclick="location.href='addTask.php'">Add Task</button>
+                
             </form>
         </div>
     </main>
 
-    <script>
-        document.getElementById('add-task').addEventListener('click', function() {
-            var table = document.querySelector('.task-table tbody');
-            var newRow = table.insertRow();
-            newRow.innerHTML = `
-                <td><input type="text" name="task_name[]"></td>
-                <td><input type="date" name="task_duration[]"></td>
-                <td><input type="text" name="task_desc[]"></td>
-                <td><select name="task_status[]"><option value="pending">Pending</option><option value="completed">Completed</option></select></td>
-                <td><button type="submit" class="delete-task">Edit</button></td>
-            `;
-        });
-    </script>
+ 
 </body>
 </html>
