@@ -2,7 +2,7 @@
 include 'dbconn.php'; // Include the database connection file
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Check if both week, mood, and user_email fields are set
+    // Check if all fields are set
     if (isset($_POST['week']) && isset($_POST['mood']) && isset($_POST['user_email'])) {
         $week = $_POST['week'];
         $mood = $_POST['mood'];

@@ -53,6 +53,7 @@ HTML <!DOCTYPE html>
   <div class="tools">
     <h2 style="text-align: left;">Mood Tracker</h2>
     <form id="mood-form" action="submit_entry.php" method="POST"> 
+    <input type="hidden" name="user_email" value="<?php echo $_SESSION['email']; ?>">
       <select id="week" name="week" class="date">
         <option value="Monday">Monday</option>
         <option value="Tuesday">Tuesday</option>
@@ -65,7 +66,7 @@ HTML <!DOCTYPE html>
 
       <div class="mood">
         <input type="radio" id="mood1" name="mood" value="M001">
-        <label for="mood1"> Relaxed, Content</label><br>
+        <label for="mood1">Relaxed, Content</label><br>
         
         <input type="radio" id="mood2" name="mood" value="M002">
         <label for="mood2">Energetic, Motivated</label><br>

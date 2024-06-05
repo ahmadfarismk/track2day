@@ -112,10 +112,6 @@ CREATE TABLE `mood` (
   PRIMARY KEY (`mood_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `mood`
---
-
 INSERT INTO `mood` (`mood_id`, `mood_score`, `mood_desc`) VALUES
 ('M001', 1, 'Relaxed, Content'),
 ('M002', 2, 'Energetic, Motivated'),
