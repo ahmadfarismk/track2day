@@ -148,4 +148,7 @@ function maskPassword($password) {
     </main>
 
 </body>
+    <div class="bottom-bar">
+        <p>&copy; 2023 Track2Day . All rights reserved</p>
+    </div>
 </html>
