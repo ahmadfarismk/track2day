@@ -11,28 +11,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         $taskDurations = $_POST['task_duration'];
         $taskDescs = $_POST['task_desc'];
         $taskStatuses = $_POST['task_status'];
-        $task_id = "SELECT task_id from task where user_email= $user_email";
+        
 
         // Loop through the tasks array to insert each task into the database
         foreach ($taskNames as $index => $taskName) {
             $taskDuration = $taskDurations[$index];
             $taskDesc = $taskDescs[$index];
             $taskStatus = $taskStatuses[$index];
-
-            // if (isset($_POST['delete'])) 
-            // {
-            //     $sqlSel = "SELECT * FROM task WHERE task_id= '$task_id'";
-
-            //     $sqlDelete = "DELETE FROM task WHERE task_id = '" . $task_id . "'  ";
-            //     echo"<br>";
-            //     echo $sqlDelete;
-            //     mysqli_query($dbconn, $sqlDelete) or die ("Error: " . mysqli_error($dbconn));
-            // }
-
-                
-            
-
-            
 
             // Perform the insert query
             $sql = "INSERT INTO task (task_name, task_duration, task_desc, task_status, user_email) 

@@ -1,3 +1,11 @@
+<?php
+include('dbconn.php');
+session_start();
+if (!isset($_SESSION['email'])) {
+    header("Location: login.html");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,14 +18,6 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <?php
-    session_start();
-    if (!isset($_SESSION['email'])) {
-        header("Location: login.html");
-        exit();
-    }
-    ?>
-
     <!-- navbar -->
     <nav class="navbar">
         <div class="logo_item">
@@ -63,7 +63,6 @@
                     <tbody>
                         <!-- PHP to fetch and display tasks -->
                         <?php
-                        include('dbconn.php');
                         $user_email = $_SESSION['email'];
                         $sql_tasks = "SELECT * FROM task WHERE user_email = '$user_email'";
                         $result_tasks = mysqli_query($dbconn, $sql_tasks);
@@ -75,7 +74,7 @@
                                 echo "<td><input type='date' name='task_duration[]' value='" . htmlspecialchars($row_task['task_duration']) . "'></td>";
                                 echo "<td><input type='text' name='task_desc[]' value='" . htmlspecialchars($row_task['task_desc']) . "'></td>";
                                 echo "<td><select name='task_status[]'><option value='pending'" . ($row_task['task_status'] == 'pending' ? ' selected' : '') . ">Pending</option><option value='completed'" . ($row_task['task_status'] == 'completed' ? ' selected' : '') . ">Completed</option></select></td>";
-                                echo "<td><button type='submit' class='delete-task'>Delete</button></td>";
+                                echo '<td><button type="button" onclick="location.href=\'editTask.php?id=' . $row_task['task_id'] . '\'">Edit</button></td>';
                                 echo "</tr>";
                             }
                         }
@@ -97,15 +96,8 @@
                 <td><input type="date" name="task_duration[]"></td>
                 <td><input type="text" name="task_desc[]"></td>
                 <td><select name="task_status[]"><option value="pending">Pending</option><option value="completed">Completed</option></select></td>
-                <td><button type="submit" class="delete-task">Delete</button></td>
+                <td><button type="submit" class="delete-task">Edit</button></td>
             `;
-        });
-
-        document.querySelector('.task-table').addEventListener('click', function(e) {
-            if (e.target.classList.contains('delete-task')) {
-                var row = e.target.closest('tr');
-                row.remove();
-            }
         });
     </script>
 </body>
