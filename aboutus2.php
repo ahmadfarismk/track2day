@@ -78,7 +78,7 @@ if ($result && mysqli_num_rows($result) > 0) {
         <div class="therapist-container-2">
             <div class="therapist-box">
                 <h2>Dr. Zarith</h2>
-                <img src="messi.jpg" class="center-align image">
+                <img src="zarith.png" class="center-align image">
                 <br>
                 <img src="rating.jpg" class="center-align rating">
                 <img src="rating.jpg" class="center-align rating">

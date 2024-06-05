@@ -9,16 +9,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user_email = $_POST['user_email'];
 
         // Perform SQL query to insert data into the database
-        $query = "INSERT INTO `user_mood` (`week`, `user_email`, `mood_id`) VALUES ('$week', '$user_email', '$mood')";
+        $query = "INSERT INTO `user_mood` (`week`, `user_email`, `mood_desc`) VALUES ('$week', '$user_email', '$mood')";
         if (mysqli_query($dbconn, $query)) {
-            // Redirect back to tools.html or do something else
-            header("Location: tools.html");
+            header("Location: tools.php");
             exit();
         } else {
             echo "<p>Database error: " . mysqli_error($dbconn) . "</p>";
         }
     } else {
-        echo "<p>Please fill in all fields.</p>";
+        echo '<p>Mood has been logged-in. <a href="tools.php">Go Back To Tools</a></p>';
     }
 } else {
     echo "<p>Invalid request method.</p>";
