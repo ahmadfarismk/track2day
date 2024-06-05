@@ -79,7 +79,8 @@ function maskPassword($password) {
                 </div>
                 <div class="profile-details">
                     <p><strong>Name: </strong><?php echo htmlspecialchars($adm_fname) . ' ' . htmlspecialchars($adm_lname); ?></p>
-                    <p><strong>Email: </strong><?php echo htmlspecialchars($adm_email); ?></p>
+                    <br>
+                    <p><strong> Email: </strong><?php echo htmlspecialchars($adm_email); ?></p>
                 </div>
             </div>
 
