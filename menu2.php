@@ -54,6 +54,8 @@ if ($result && mysqli_num_rows($result) > 0) {
               <a href="menu2.php"><li>Home</li></a>
               <a href="aboutus.html"><li>About</li></a>
               <a href="userprofile.php"><li>Profile</li></a>
+              <a href="tools.php"><li>Tools</li></a>
+              <a href="tasks.php"><li>Tasks</li></a>
             </ul>
           </div>
 

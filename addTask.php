@@ -23,7 +23,7 @@ if (!isset($_SESSION['email'])) {
 <body>
     <main>
         <div class="tasks-container">
-            <h1>Edit Task</h1>
+            <h1>Add New Task</h1>
             <form action="saveTasks.php" method="POST">
                 <input type="hidden" name="task_id" value="<?php echo $task_id; ?>">
                 <div>
@@ -45,7 +45,7 @@ if (!isset($_SESSION['email'])) {
                         <option value="completed">Completed</option>
                     </select>
                 </div>
-                <button type="submit" name="Add new task">Update Task</button>
+                <button type="submit" name="Add new task">Add Task</button>
             </form>
         </div>
     </main>
