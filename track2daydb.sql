@@ -127,7 +127,7 @@ INSERT INTO `mood` (`mood_id`, `mood_score`, `mood_desc`) VALUES
 --
 
 CREATE TABLE `task` (
-  `task_id` varchar(11) NOT NULL,
+  `task_id` int(11) NOT NULL,
   `task_name` varchar(45) NOT NULL,
   `task_desc` varchar(45) NOT NULL,
   `task_duration` date DEFAULT NULL,
@@ -143,20 +143,17 @@ CREATE TABLE `task` (
 --
 
 INSERT INTO `task` (`task_id`, `task_name`, `task_desc`, `task_duration`, `task_status`, `user_email`) VALUES
-('T001', 'Task 1', 'Description 1', '2024-06-01', 'Incomplete', 'max@gmail.com'),
-('T002', 'Task 2', 'Description 2', '2024-06-02', 'Complete', 'carlos@gmail.com'),
-('T003', 'Task 3', 'Description 3', '2024-06-03', 'Pending', 'lewis@gmail.com'),
-('T004', 'Task 4', 'Description 4', '2024-06-04', 'Complete', 'max@gmail.com'),
-('T005', 'Task 5', 'Description 5', '2024-06-05', 'Incomplete', 'lando@gmail.com');
-
+(1001, 'Task 1', 'Description 1', '2024-06-01', 'Incomplete', 'max@gmail.com'),
+(1002, 'Task 2', 'Description 2', '2024-06-02', 'Complete', 'carlos@gmail.com'),
+(1003, 'Task 3', 'Description 3', '2024-06-03', 'Pending', 'lewis@gmail.com'),
+(1004, 'Task 4', 'Description 4', '2024-06-04', 'Complete', 'max@gmail.com'),
+(1005, 'Task 5', 'Description 5', '2024-06-05', 'Incomplete', 'lando@gmail.com'),
+(1006, 'Lumba haram', 'DDU DDU DDUU', '2024-06-28', 'completed', 'max@gmail.com'),
+(1007, 'Gi masjid', 'coding', '2024-06-01', 'completed', 'max@gmail.com'),
+(1008, 'jumpa max', 'lumba haram', '2024-06-08', 'completed', 'carlos@gmail.com'),
+(1009, 'taubat', 'ingat tuhan', '2024-06-16', 'completed', 'carlos@gmail.com');
 -- --------------------------------------------------------
 
-
---
--- Table structure for table `user_mood`
---
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `user_mood`
@@ -184,80 +181,7 @@ INSERT INTO `user_mood` (`week`, `user_email`, `mood_id`) VALUES
 ('Thursday', 'lando@gmail.com', 'M004'),
 ('Saturday', 'lewis@gmail.com', 'M001');
 
---
--- Indexes for dumped tables
---
 
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`adm_email`);
-
---
--- Indexes for table `journal`
---
-ALTER TABLE `journal`
-  ADD PRIMARY KEY (`journal_id`),
-  ADD KEY `fk_user_email_journal` (`user_email`);
-
---
--- Indexes for table `mood`
---
-ALTER TABLE `mood`
-  ADD PRIMARY KEY (`mood_id`);
-
---
--- Indexes for table `task`
---
-ALTER TABLE `task`
-  ADD PRIMARY KEY (`task_id`),
-  ADD KEY `fk_user_email_task` (`user_email`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`user_email`),
-  ADD KEY `fk_admin_email` (`adm_email`);
-
---
--- Indexes for table `user_mood`
---
-ALTER TABLE `user_mood`
-  ADD PRIMARY KEY (`week`, `user_email`, `mood_id`),
-  ADD KEY `fk_mood_id_user_mood` (`mood_id`),
-  ADD KEY `fk_user_email_user_mood` (`user_email`);
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `journal`
---
-ALTER TABLE `journal`
-  ADD CONSTRAINT `fk_user_email_journal` FOREIGN KEY (`user_email`) REFERENCES `user` (`user_email`);
-
---
--- Constraints for table `task`
---
-ALTER TABLE `task`
-  ADD CONSTRAINT `fk_user_email_task` FOREIGN KEY (`user_email`) REFERENCES `user` (`user_email`);
-
---
--- Constraints for table `user`
---
-ALTER TABLE `user`
-  ADD CONSTRAINT `fk_admin_email` FOREIGN KEY (`adm_email`) REFERENCES `admin` (`adm_email`);
-
---
--- Constraints for table `user_mood`
---
-ALTER TABLE `user_mood`
-  ADD CONSTRAINT `fk_mood_id_user_mood` FOREIGN KEY (`mood_id`) REFERENCES `mood` (`mood_id`),
-  ADD CONSTRAINT `fk_user_email_user_mood` FOREIGN KEY (`user_email`) REFERENCES `user` (`user_email`);
 
 COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

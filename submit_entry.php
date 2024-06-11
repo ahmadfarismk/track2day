@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user_email = $_POST['user_email'];
 
         // Perform SQL query to insert data into the database
-        $query = "INSERT INTO `user_mood` (`week`, `user_email`, `mood_desc`) VALUES ('$week', '$user_email', '$mood')";
+        $query = "INSERT INTO `user_mood` (`week`, `user_email`, `mood_id`) VALUES ('$week', '$user_email', '$mood')";
         if (mysqli_query($dbconn, $query)) {
             header("Location: tools.php");
             exit();
