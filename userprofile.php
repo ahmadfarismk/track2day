@@ -20,6 +20,7 @@ if ($result && mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
     $user_fname = $row['user_fname'];
     $user_lname = $row['user_lname'];
+    $user_type = $row['user_type'];
 } else {
     // Error if user data is not found
     echo "Error: User data not found.";
@@ -114,6 +115,7 @@ mysqli_close($dbconn);
                 <div class="profile-details">
                     <p><strong>Name: </strong><?php echo htmlspecialchars($user_fname) . ' ' . htmlspecialchars($user_lname); ?></p>
                     <p><strong>Email: </strong><?php echo htmlspecialchars($user_email); ?></p>
+                    <p><strong>Plan: </strong><?php echo htmlspecialchars($user_type); ?></p>
                 </div>
             </div>
 
