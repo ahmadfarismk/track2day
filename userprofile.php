@@ -120,6 +120,7 @@ mysqli_close($dbconn);
             <div class="profile-actions">
                 <button onclick="location.href='editprofile.html'">Edit Profile</button>
                 <button onclick="location.href='changepassword.html'">Change Password</button>
+                <button onclick="location.href='subscribe.html'">Upgrade to Premium!</button>
             </div>
         </div>
 

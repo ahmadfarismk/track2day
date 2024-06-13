@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <title>Track2Day</title>
+    <link rel="icon" type="image/x-icon" href="track2daylogo.jpg">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="logo_item">
+            <img src="track2daylogo.jpg" alt="Track2Day Logo">
+            <a href="menu2.php">Track2Day</a>
+            <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+              <a href="menu2.php"><li>Home</li></a>
+              <a href="aboutus.html"><li>About</li></a>
+              <a href="userprofile.php"><li>Profile</li></a>
+              <a href="tools.php"><li>Tools</li></a>
+              <a href="tasks.php"><li>Tasks</li></a>
+            </ul>
+          </div>
+        </div>
+        <div class="navbar_content">
+            <i class='bi bi-grid'></i>
+            <i class='bx bx-sun' id="darkLight"></i>
+            <i class='bx bx-bell'></i>
+            <ul>
+                <li><a href="logout.php">Logout</a></li>
+                <li><a href="userprofile.php">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        
+            <div class="subscribe-container">
+                <div class="subscribe-form">
+                    <h2>Subscribe now!</h2>
+                    <form action="subscribe.php" method="post">
+                        <div class="subscribe-input-group">
+                            <p>Upgrade to Premium and unlock up to 3 Premium features with only RM12.90 for lifetime purchase! </p>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="bank">Choose your bank for payment:</label>
+                            <select id="bank" name="bank" required>
+                                <option value="">Select a bank</option>
+                                <option value="bank_islam">Bank Islam</option>
+                                <option value="maybank">Maybank2u</option>
+                                <option value="rhb">RHB Now</option>
+                                <option value="cimb">CIMB Clicks</option>
+                                <option value="ambank">Ambank</option>
+                            </select>
+                        </div>
+                        <button type="submit">Upgrade to Premium (RM12.90/Lifetime)</button>
+                    </form>
+        
+        
+                </div>
+        
+            </div>
+        
+    </main>
+</body>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <h3>Contact Us</h3>
+            <p>Email: track2day@enquiries.com</p>
+            <p>Phone:+ 03-84532900</p>
+            <p>Address: 56 Jln 14/48 Seksyen 14 Petaling Jaya</p>
+        </div>
+        <div class="footer-content">
+            <h3>Quick Links</h3>
+             <ul class="list">
+                <li><a href="menu2.php">Home</a></li>
+                <li><a href="aboutus2.php">About</a></li>
+                </li>
+                <a href="https://github.com/ahmadfarismk/track2day.git" class="github-link">
+                    <img src="github.png" alt="GitHub" class="github-img" >
+                </a>
+             </ul>
+        </div>
+        
+    </div>
+    <div class="bottom-bar">
+        <p>&copy; 2023 Track2Day . All rights reserved</p>
+        
+        
+    </div>
+</footer>
+</html>
