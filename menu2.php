@@ -84,6 +84,7 @@ if ($result && mysqli_num_rows($result) > 0) {
       </div> -->
     </nav>
     
+
     <main>
         <h2 id="title">Welcome to Track2Day! <br> Tracking mood is now ease! </h2><br>
         <div class="container">
