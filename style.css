@@ -1376,6 +1376,8 @@ th, td {
 th {
   background-color: #f2f2f2;
 }
+
+/*subscribe.html*/
 .subscribe-container {
   display: flex;
   justify-content: center;
