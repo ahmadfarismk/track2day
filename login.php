@@ -30,6 +30,7 @@ if ($user_type == 'admin') {
     $field2 = "user_fname";
     $field3 = "user_lname";
     $field4 = "user_password";
+    $field5 = "user_privilege";
     $location = "userprofile.php";
 }
 
@@ -47,6 +48,8 @@ if (mysqli_num_rows($result_email_check) == 1) {
         $_SESSION['email'] = $email;
         $_SESSION['fname'] = $data[$field2];
         $_SESSION['lname'] = $data[$field3];
+        $_SESSION['user_type'] = $data[$field5];    
+        
         echo "<script>
                 alert('Welcome back, {$_POST['user_type']} {$_SESSION['fname']} {$_SESSION['lname']}');
                 window.location.href='$location';

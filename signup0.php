@@ -9,6 +9,7 @@ session_start();
 	$user_lname = $_REQUEST['lname'];
 	$user_password = $_REQUEST['password'];
 	$chosen_adm = $_REQUEST['chosen_adm'];
+	$user_privilege = $_REQUEST['user_privilege'];
 	
 	if ($chosen_adm == 'zarith') {
 		$chosen_adm='zarith@gmail.com';
@@ -25,7 +26,7 @@ session_start();
 
 	$sqlInsert = "INSERT INTO user VALUES
 	('" . $user_email . "','" . $user_fname . "',
-	 '" . $user_lname . "','" . $user_password . "', '" . $chosen_adm . "')";
+	 '" . $user_lname . "','" . $user_password . "', '" . $chosen_adm . "', '" . $user_privilege . "')"; 
 	 
 	 mysqli_query($dbconn, $sqlInsert) or die ("Error: " . mysqli_error($dbconn));
 	 echo "<script>

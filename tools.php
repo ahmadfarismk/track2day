@@ -11,10 +11,18 @@ HTML <!DOCTYPE html>
 </head>
 <body>
   <?php
-  session_start();
+  session_start(); 
+  $user_type = $_SESSION['user_type'];
     if (!isset($_SESSION['email'])) {
         header("Location: login.html");
         exit();
+    }
+    if ($user_type != 'premium') {
+      echo "<script>
+      alert('You do not have permission to access this page. Please subscribe to Premium to use this feature.');
+      window.location.href = 'menu2.php';
+      </script>";
+      exit();
     }
     ?>
     
