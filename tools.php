@@ -98,7 +98,7 @@
         <label for="mood6">MOO6: Frustrated, Anxious, Grumpy</label><br><br>
   
         <button id="button1" class="button">Submit</button>
-        <button id="button2" class="button">Delete</button>
+        <button id="button2" class="button" onclick="deleteMood()">Delete</button>
       </div>
     </form>
   </div>
