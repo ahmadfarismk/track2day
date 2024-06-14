@@ -1,6 +1,7 @@
 <?php
 include('dbconn.php');
 session_start();
+$user_type = $_SESSION['user_type'];
 if (!isset($_SESSION['email'])) {
     header("Location: login.html");
     exit();
@@ -22,7 +23,14 @@ if (!isset($_SESSION['email'])) {
     <nav class="navbar">
         <div class="logo_item">
             <img src="track2daylogo.jpg" alt="Track2Day Logo">
-            <a href="menu2.php">Track2Day</a>
+            <?php
+            if ($user_type == 'premium') {
+                echo '<a href="menu2.php">Track2Day+</a>';
+            }
+            else {
+                echo '<a href="menu2.php">Track2Day</a>';
+            }
+            ?>
             <div id="menuToggle">
             <input type="checkbox" />
             <span></span>
@@ -38,9 +46,7 @@ if (!isset($_SESSION['email'])) {
           </div>
         </div>
         <div class="navbar_content">
-            <i class='bi bi-grid'></i>
-            <i class='bx bx-sun' id="darkLight"></i>
-            <i class='bx bx-bell'></i>
+
             <ul>
                 <li><a href="logout.php">Logout</a></li>
                 <li><a href="userprofile.php">Profile</a></li>

@@ -10,6 +10,7 @@ if (!isset($_SESSION['email'])) {
 include('dbconn.php');
 
 $user_email = $_SESSION['email'];
+$user_type = $_SESSION['user_type'];
 
 // User profile container
 // Fetch user information from the database
@@ -78,7 +79,14 @@ mysqli_close($dbconn);
     <nav class="navbar">
         <div class="logo_item">
             <img src="track2daylogo.jpg" alt="Track2Day Logo">
-            <a href="menu2.php">Track2Day</a>
+            <?php
+            if ($user_type == 'premium') {
+                echo '<a href="menu2.php">Track2Day+</a>';
+            }
+            else {
+                echo '<a href="menu2.php">Track2Day</a>';
+            }
+            ?>
             <div id="menuToggle">
             <input type="checkbox" />
             <span></span>
@@ -94,9 +102,6 @@ mysqli_close($dbconn);
           </div>
         </div>
         <div class="navbar_content">
-            <i class='bi bi-grid'></i>
-            <i class='bx bx-sun' id="darkLight"></i>
-            <i class='bx bx-bell'></i>
             <ul>
                 <li><a href="logout.php">Logout</a></li>
                 <li><a href="userprofile.php">Profile</a></li>
@@ -120,7 +125,14 @@ mysqli_close($dbconn);
             <div class="profile-actions">
                 <button onclick="location.href='editprofile.html'">Edit Profile</button>
                 <button onclick="location.href='changepassword.html'">Change Password</button>
-                <button onclick="location.href='subscribe.html'">Upgrade to Premium!</button>
+                <?php
+                if ($user_type == 'premium') {
+                    echo '<button>You are now Premium!</button>';
+                }
+                else {
+                    echo '<button onclick="location.href=\'subscribe.html\'">Upgrade to Premium!</button>';
+                }
+                ?>
             </div>
         </div>
 

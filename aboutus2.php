@@ -10,6 +10,7 @@ if (!isset($_SESSION['email'])) {
 include('dbconn.php');
 
 $user_email = $_SESSION['email'];
+$user_type = $_SESSION['user_type'];
 
 // User profile container
 // Fetch user information from the database
@@ -43,13 +44,17 @@ if ($result && mysqli_num_rows($result) > 0) {
       <div class="logo_item">
         <i class="bx bx-menu" id="sidebarOpen"></i>
         <img src="icon.jpg" alt="">
-        <a href="menu.html">Track2Day</a>
+        <?php
+            if ($user_type == 'premium') {
+                echo '<a href="menu2.php">Track2Day+</a>';
+            }
+            else {
+                echo '<a href="menu2.php">Track2Day</a>';
+            }
+            ?>
         
       </div>
       <div class="navbar_content">
-        <i class='bi bi-grid'></i>
-        <i class='bx bx-sun' id="darkLight"></i>
-        <i class='bx bx-bell' ></i>
         <ul>
             <li><a href="logout.php">Logout</a></li>
             <li><a href="userprofile.php">Profile</a></li>
