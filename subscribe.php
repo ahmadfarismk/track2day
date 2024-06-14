@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     // Update the user_type to 'premium' in the database
     $query = "UPDATE user SET user_type='premium' WHERE user_email='$user_email'";
-    $_SESSION['user_type'] = 'premium';
+    $_SESSION['user_privilege'] = 'premium';
 
         
     if (mysqli_query($dbconn, $query)) {

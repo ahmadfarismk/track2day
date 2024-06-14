@@ -12,7 +12,7 @@
 <body>
   <?php
   session_start(); 
-  $user_type = $_SESSION['user_type'];
+  $user_type = $_SESSION['user_privilege'];
     if (!isset($_SESSION['email'])) {
         header("Location: login.html");
         exit();

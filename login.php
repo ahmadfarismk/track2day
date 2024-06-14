@@ -16,6 +16,17 @@ $email = mysqli_real_escape_string($dbconn, $_POST['email']);
 $password = mysqli_real_escape_string($dbconn, $_POST['password']);
 $user_type = $_POST['user_type'];
 
+
+$sql = "SELECT * FROM user WHERE user_email = '$email'";
+$result = mysqli_query($dbconn, $sql);
+
+if ($result && mysqli_num_rows($result) > 0) {
+    $row = mysqli_fetch_assoc($result);
+    $user_privilege = $row['user_type'];
+} 
+
+
+
 # Define variables based on user type [admin or user]
 if ($user_type == 'admin') {
     $table = "admin";
@@ -30,7 +41,7 @@ if ($user_type == 'admin') {
     $field2 = "user_fname";
     $field3 = "user_lname";
     $field4 = "user_password";
-    $field5 = "user_privilege";
+    $field5 = $user_privilege;
     $location = "userprofile.php";
 }
 
@@ -48,10 +59,10 @@ if (mysqli_num_rows($result_email_check) == 1) {
         $_SESSION['email'] = $email;
         $_SESSION['fname'] = $data[$field2];
         $_SESSION['lname'] = $data[$field3];
-        $_SESSION['user_type'] = $data[$field5];    
+        $_SESSION['user_privilege'] = $field5;   
         
         echo "<script>
-                alert('Welcome back, {$_POST['user_type']} {$_SESSION['fname']} {$_SESSION['lname']}');
+                alert('Welcome back, {$_POST['user_type']} {$_SESSION['fname']} {$_SESSION['lname']} !');
                 window.location.href='$location';
               </script>";
     } else {

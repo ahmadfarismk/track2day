@@ -10,7 +10,7 @@ if (!isset($_SESSION['email'])) {
 include('dbconn.php');
 
 $user_email = $_SESSION['email'];
-$user_type = $_SESSION['user_type'];
+
 
 // User profile container
 // Fetch user information from the database
