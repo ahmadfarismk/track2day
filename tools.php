@@ -147,28 +147,30 @@
     
    
     <section class="journal"> 
-     <header><h1 style="text-align: center;">My Personal Journal</h1></header> 
-      <section class="section journal-section"> 
-        <div class="container"> 
-          <div class="container-row container-row-journal"> 
-            <div class="container-item container-item-journal"> 
-              <form id="entryForm" action=""> 
-                <label for="journal-id" class="journal-label">Journal ID:</label> 
-                <input type="text" id="journal-id" name="journal_id" required><br> 
-                <label for="entry-title" class="journal-label">Entry Title</label> 
-                <input 
-                type="text" 
-                name="entry-title" 
-                id="entry-title" 
-                class="entry-text-title" 
-                placeholder="Name of entry" 
-                /> 
+  <header><h1 style="text-align: center;">My Personal Journal</h1></header> 
+  <section class="section journal-section"> 
+    <div class="container"> 
+      <div class="container-row container-row-journal"> 
+        <div class="container-item container-item-journal"> 
+          <form id="entryForm" action="add_journal.php" method="POST"> 
+            <label for="journal-id" class="journal-label">Journal ID:</label> 
+            <input type="text" id="journal-id" name="journal_id" required><br> 
+            <label for="entry-title" class="journal-label">Entry Title</label> 
+            <input 
+              type="text" 
+              name="entry_title" 
+              id="entry-title" 
+              class="entry-text-title" 
+              placeholder="Name of entry" 
+              required
+            /> 
             <label for="entry" class="journal-label">Today's Entry</label> 
             <textarea 
-              name="daily-entry" 
+              name="daily_entry" 
               id="entry" 
               class="entry-text-box" 
               placeholder="What's on your mind today? 💭" 
+              required
             ></textarea> 
             <button class="btn-main entry-submit-btn" type="submit">Submit</button> 
           </form> 
@@ -184,6 +186,7 @@
     <script src="index.js"></script> 
   </section> 
 </section>
+
   
 </main>
 

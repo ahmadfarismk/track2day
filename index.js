@@ -1,8 +1,3 @@
-/* eslint-disable */
-
-// My Starter JavaScript Template
-
-// Journal Entry Form
 
 const entryForm = document.querySelector(`#entryForm`);
 const entryResultsSection = document.querySelector(`#entryResultsSection`);
